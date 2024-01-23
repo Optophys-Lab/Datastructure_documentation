@@ -16,5 +16,8 @@ Wiki, tutorials, etc.
 Index <- needs autocreation?
 
 ## Gui Documentation
+[AdminCommander](gui_documentation/AdminCommander.md)
+[WeightCommander](gui_documentation/WeightCommander.md)
 
-[WeightCommander](gui_documentation%2FWeightCommander.md)
+## eLabFTW Documentation
+[Generate Apikey](eLabFTW_documentation/generate_apikey.md)
