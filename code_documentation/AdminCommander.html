@@ -1,0 +1,1520 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>datastructure_tools.AdminCommander API documentation</title>
+<meta name="description" content="GUI to work with adminstrative stuff and lab schema tables
+connects to DataJoint DB
+Author: Artur" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>datastructure_tools.AdminCommander</code></h1>
+</header>
+<section id="section-intro">
+<p>GUI to work with adminstrative stuff and lab schema tables
+connects to DataJoint DB
+Author: Artur</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># AdminCommander.py
+&#34;&#34;&#34;
+GUI to work with adminstrative stuff and lab schema tables
+connects to DataJoint DB
+Author: Artur
+&#34;&#34;&#34;
+
+import json
+import shutil
+
+from PyQt6.QtWidgets import QApplication, QMainWindow, QFileDialog,QProgressDialog
+from PyQt6.QtCore import Qt, QThreadPool
+
+from PyQt6 import uic
+import os, sys
+from pymysql.err import OperationalError
+from pathlib import Path
+from datastructure_tools.DataBaseAccess import DataBaseAccess
+from datastructure_tools.GUI_utils import ErrorDialog, Worker, InfoDialog
+from datastructure_tools.eLabFTW_api_utils import HOST
+from datastructure_tools.eLabFTW_API import eLabbookCommander
+
+VERSION = &#34;0.4.0&#34;
+
+
+class AdminCommander(QMainWindow):
+    def __init__(self):
+        super(AdminCommander, self).__init__()
+        self.path2file = Path(os.path.abspath(__file__))
+        uic.loadUi(os.path.join(self.path2file.parent,&#39;ui&#39;, &#39;AdminCommander_design.ui&#39;), self)
+        self.setWindowTitle(&#39;AdminCommander v.%s&#39; % VERSION)
+        self.connectSignalsSlots()
+
+        self.DB = DataBaseAccess()
+        if not self.DB.server_settings_correct:
+            for t_i in [1, 2, 3, 4, 5, 6]:
+                self.Tabs.setTabEnabled(t_i, False)
+            self.Tabs.setCurrentIndex(0)
+        if not self.DB.is_connected:
+            ErrorDialog(&#39;No connection to server possible&#39;)
+            self.was_notconnected_init = True
+        else:
+            self.was_notconnected_init = False
+            self.ReadDB()
+            self.DBIP_edit_2.setText(self.DB.cfg[&#39;SQLserver_cfg&#39;][&#39;host&#39;])
+            self.DBuser_edit_2.setText(self.DB.cfg[&#39;SQLserver_cfg&#39;][&#39;user&#39;])
+            self.DBname_edit_2.setText(self.DB.cfg[&#39;SQLserver_cfg&#39;][&#39;DataBase&#39;])
+        if not self.DB.server_path:
+            ErrorDialog(&#34;No correct serverpath was found, Please Enter one and restart&#34;)
+            self.ServerB.setEnabled(True)
+            self.textBrowser.setEnabled(True)
+            self.label_15.setEnabled(True)
+
+
+
+        self.threadpool = QThreadPool()
+        #print(&#34;Multithreading with maximum %d threads&#34; % self.threadpool.maxThreadCount())
+    def connectSignalsSlots(self):
+        self.actionExit.triggered.connect(self.close)
+        self.actionUpdateDB.triggered.connect(self.ReadDB)
+        self.CUserB.clicked.connect(self.addUser2DB)
+        self.ConfigB.clicked.connect(self.saveConfigs)
+        self.ProjectB.clicked.connect(self.addProject2DB)
+        self.BBlockB.clicked.connect(self.addBB2DB)
+        self.ExpTypeB.clicked.connect(self.addExptype2DB)
+        self.BBlockB_2.clicked.connect(self.addBBlock2widget)
+        self.PathB.clicked.connect(self.browseBCallback)
+        self.DBSaveB.clicked.connect(self.saveServerSettings)
+        self.ServerB.clicked.connect(self.browseServerCallback)
+        self.Project_combo_settings.currentIndexChanged.connect(self.changeExp)
+        self.ExpType_combo.currentIndexChanged.connect(self.changeType)
+        self.CopyAtlasesB.clicked.connect(self.copy_executer)
+        # self.settingsD.buttonBox.accepted.connect(self.getInfosSettings)
+        # self.projectD.buttonBox.accepted.connect(self.getInfosProject)
+        # self.bblockD.buttonBox.accepted.connect(self.getInfosBBblock)
+        self.APIKEY_saveButton.clicked.connect(self.saveAPIKEY)
+
+    def populateGUI(self):
+        self.ExistingUser_list.clear()
+        self.ExistingUser_list.addItems(self.all_users)
+        self.ExistingProject_list.clear()
+        self.ExistingProject_list.addItems(self.all_projects)
+        self.Existing_listBB.clear()
+        self.Existing_listBB.addItems([item[&#34;building_block&#34;] for item in self.all_bblocks])
+        self.Existing_listBB_2.clear()
+        self.Existing_listBB_2.addItems([item[&#34;raw&#34;] for item in self.all_bblocks])
+        self.Existing_listExp.clear()
+        self.Existing_listExp.addItems([item[&#34;experiment_template&#34;] for item in self.all_exptypes])
+        self.Existing_listExp_2.clear()
+        self.Existing_listExp_2.addItems([str(self.exp_templates[exp_type]) for exp_type in [item[&#34;experiment_template&#34;]
+                                                                                        for item in self.all_exptypes]])
+
+
+        self.User_combo.clear()
+        self.User_combo.addItems(self.all_users)
+        self.Project_combo_settings.clear()
+        self.Project_combo_settings.addItems(self.all_projects)
+        self.ExpType_combo.clear()
+        self.ExpType_combo.addItems([item[&#34;experiment_template&#34;] for item in self.all_exptypes])
+        self.BBlock_combo.clear()
+        self.BBlock_combo.addItems([item[&#34;building_block&#34;] for item in self.all_bblocks])
+        if self.DB.server_path:
+            potential_proj = [path for path in os.listdir(self.DB.server_path) if
+                              ((Path(self.DB.server_path) / path).is_dir()) and (path not in self.all_projects)]
+        else:
+            potential_proj = None
+        if not potential_proj:
+            self.ProjectB.setDisabled(True)
+            self.Project_combo.setDisabled(True)
+        else:
+            self.ProjectB.setDisabled(False)
+            self.Project_combo.setDisabled(False)
+            self.Project_combo.clear()
+            self.Project_combo.addItems(potential_proj)
+
+        self.Atlas_combo.clear()
+        self.Atlas_combo.addItems([item[&#34;brain_atlas&#34;] for item in self.all_atlases])
+
+        self.eLabFTW_linkEdit.setText(f&#34;{HOST.split(&#39;/api&#39;)[0]}/ucp.php?tab=4&#34;)
+        if self.DB.cfg.get(&#39;eLabAPIKEY&#39;, None):
+            self.elabAPIKEY.setText(self.DB.cfg.get(&#39;eLabAPIKEY&#39;))
+
+    def saveAPIKEY(self):
+        APIKEY = self.elabAPIKEY.text()
+        if eLabbookCommander(APIKEY, HOST,self.DB).test_connection():
+            self.DB.cfg[&#39;eLabAPIKEY&#39;] = APIKEY
+            with open(self.path2file.parent / &#34;user_config.json&#34;, &#34;rt&#34;) as fi:
+                user_config = json.load(fi)
+            user_config.update({&#39;eLabAPIKEY&#39;: APIKEY})
+            with open(self.path2file.parent / &#34;user_config.json&#34;, &#34;wt&#34;) as fi:
+                json.dump(user_config, fi)
+            self.APIKEY_saveButton.setText(&#39;saved&#39;)
+        else:
+            ErrorDialog(&#39;Wrong APIKEY, check your input&#39;)
+
+
+    def copy_complete(self):
+        self.statusbar.showMessage(&#39;Finished coping atlas files&#39;)
+        self.process_dialog.reset()
+    def handle_copy_errors(self,e):
+        if issubclass(e[0], FileExistsError):
+            ErrorDialog(&#39;Atlas is already copied!&#39;)
+        elif issubclass(e[0], FileNotFoundError):
+            ErrorDialog(&#39;AtlasFiles not found!/nIs serverpath correct?&#39;)
+    def copy_executer(self):
+        self.process_dialog = QProgressDialog(&#39;Copying Atlas files..&#39;,&#39;Abort&#39;,0,0,autoClose=True)
+        worker = Worker(self.copyAtlasFiles)  # Any other args, kwargs are passed to the run function
+        worker.signals.error.connect(self.handle_copy_errors)
+        worker.signals.finished.connect(self.copy_complete)
+        self.threadpool.start(worker)
+        self.statusbar.showMessage(&#39;Copying Atlas files..&#39;)
+        self.process_dialog.exec()
+
+    def copyAtlasFiles(self, progress_callback):
+        if self.DB.server_settings_correct:
+            atlas2copy = self.Atlas_combo.currentText()
+            ATLAS_PATH = Path([item[&#34;atlas_path&#34;] for item in self.all_atlases if item[&#34;brain_atlas&#34;] == atlas2copy][0])
+            if (Path(self.DB.server_path).parent.parent / ATLAS_PATH).exists():
+                atlas_path = Path(self.DB.server_path).parent.parent / ATLAS_PATH
+            else:
+                atlas_path = Path(self.DB.server_path).parent / ATLAS_PATH
+            # TODO remove single parent after changing the root directory
+
+            cur_path = os.path.abspath(os.path.dirname(__file__))
+            if not (Path(cur_path) / &#34;Atlas_files&#34;).exists():
+                os.mkdir(Path(cur_path) / &#34;Atlas_files&#34;)
+
+            QApplication.processEvents()
+            shutil.copytree(atlas_path, Path(cur_path) / &#34;Atlas_files&#34; / atlas2copy)
+
+
+    def changeType(self):
+        try:
+            bblock_available = self.exp_templates[self.ExpType_combo.currentText()]
+            self.ExpType_combo_2.clear()
+            self.ExpType_combo_2.addItems(bblock_available)
+        except KeyError:  # stupid error due to change callbacks
+            pass
+
+    def changeExp(self):
+        if self.DB.server_path:
+            experiments_available = [path for path in
+                                     os.listdir(self.DB.server_path / self.Project_combo_settings.currentText())
+                                     if
+                                     (self.DB.server_path / self.Project_combo_settings.currentText() / path).is_dir()]
+        else:
+            experiments_available = []
+        for id, exp in enumerate(experiments_available):
+            if exp == &#34;misc&#34;:
+                experiments_available.pop(id)
+        self.ExpName_combo.clear()
+        self.ExpName_combo.addItems(experiments_available)
+
+    def addBBlock2widget(self):
+        bbloc2add = self.BBlock_combo.currentText()
+        if not self.BBblock_list.findItems(bbloc2add, Qt.MatchFlag.MatchExactly):
+            self.BBblock_list.addItem(bbloc2add)
+
+    def saveConfigs(self):
+        if not self.DB.server_path:  # if not serverpath under defaults
+            server_paths = self.DB.default_server_paths
+            if not self.textBrowser.toPlainText():
+                ErrorDialog(&#34;No serverpath added!&#34;)
+                return
+            else:
+                server_paths.append(self.textBrowser.toPlainText())
+        else:
+            server_paths = self.DB.default_server_paths
+
+        initialdir = {}
+        for p in range(self.listWidget.count()):
+            initialdir[self.listWidget.item(p).text()] = self.listWidget_2.item(p).text()
+        user_config = {&#34;Server_path&#34;: server_paths,
+                       &#34;user_id&#34;: self.User_combo.currentText(),
+                       &#34;project&#34;: self.Project_combo_settings.currentText(),
+                       &#34;experiment_template&#34;: self.ExpType_combo.currentText(),
+                       &#34;sub_experiment&#34;: self.ExpName_combo.currentText(),
+                       &#34;initialDir&#34;: initialdir}
+
+        with open(self.path2file.parent / &#34;user_config.json&#34;, &#34;wt&#34;) as fi:
+            json.dump(user_config, fi)
+
+        self.statusbar.showMessage(&#39;User config file was saved&#39;)
+
+    def saveServerSettings(self):
+        if not self.DBIP_edit.text():
+            ErrorDialog(&#34;No IP&#34;)
+            return
+        if not self.DBuser_edit.text():
+            ErrorDialog(&#34;No user&#34;)
+            return
+        if not self.DBname_edit.text():
+            ErrorDialog(&#34;No DB name !&#34;)
+            return
+
+        server_settings = {&#34;host&#34;: self.DBIP_edit.text(), &#34;user&#34;: self.DBuser_edit.text(),
+                           &#34;password&#34;: self.DBpass_edit.text(), &#34;DataBase&#34;: self.DBname_edit.text()}
+        settings = {&#34;SQLserver_cfg&#34;: server_settings}
+
+        import datajoint as dj
+        dj.config[&#39;database.host&#39;] = settings[&#39;SQLserver_cfg&#39;][&#39;host&#39;]
+        dj.config[&#39;database.user&#39;] = settings[&#39;SQLserver_cfg&#39;][&#39;user&#39;]
+        dj.config[&#39;database.password&#39;] = settings[&#39;SQLserver_cfg&#39;][&#39;password&#39;]
+        try:
+            dj.conn(reset=True)
+            self.DBIP_edit_2.setText(dj.config[&#39;database.host&#39;])
+            self.DBuser_edit_2.setText(dj.config[&#39;database.user&#39;])
+            self.DBname_edit_2.setText(settings[&#39;SQLserver_cfg&#39;][&#34;DataBase&#34;])
+        except OperationalError:
+            ErrorDialog(&#39;Wrong user or password? No connection possible&#39;)
+            self.DBIP_edit_2.setText(&#39;Not Connected&#39;)
+            self.DBuser_edit_2.setText(&#39;Not Connected&#39;)
+            self.DBname_edit_2.setText(&#39;Not Connected&#39;)
+            return
+        with open(self.path2file.parent / &#39;DataJoint&#39; / &#34;server_config.json&#34;, &#34;wt&#34;) as fi:
+            json.dump(settings, fi)
+        self.labelConnected.setText(&#34;Connected&#34;)
+        self.statusbar.showMessage(&#39;DB config file was saved&#39;)
+
+        if not self.was_notconnected_init:
+            InfoDialog(&#39;server settings changed, restart application&#39;)
+            # need to restart python, other all previous references to schemas are still pointing to old objects
+            self.close()
+        for t_i in [1, 2, 3, 4, 5, 6]:
+            self.Tabs.setTabEnabled(t_i, True)
+
+        self.DB.readConfigs()
+        self.DB._connect()
+        if self.DB.is_connected:  # only if connected proceed
+            self.DB._instanciateSchemas()
+        self.ReadDB()
+
+    def browseServerCallback(self):
+        path = QFileDialog.getExistingDirectory(self)
+        self.textBrowser.setText(path)
+
+    def browseBCallback(self):
+        path = QFileDialog.getExistingDirectory(self)
+        bbloc2add = self.ExpType_combo_2.currentText()
+        if not self.listWidget.findItems(bbloc2add, Qt.MatchFlag.MatchExactly):
+            self.listWidget.insertItem(0, bbloc2add)
+            self.listWidget_2.insertItem(0, path)
+
+    def addProject2DB(self):
+        &#34;&#34;&#34;
+        is called when add Exp button is clicked
+        checks inputs and sends them to DataBaseAccess
+        &#34;&#34;&#34;
+        proj_name = self.Project_combo.currentText()
+        proj_desc = self.ProjDesc_edit.toPlainText()
+        keywords = [keyword.strip().lower() for keyword in self.ProjKey_edit.toPlainText().replace(&#39;,&#39;, &#39;/&#39;).split(&#39;/&#39;)]
+
+        if not proj_desc:
+            ErrorDialog(&#34;No Description!&#34;)
+            return
+
+        if self.CreateFolderB.isChecked():
+            folder_name = self.expName_Edit.text()
+            if not folder_name:
+                ErrorDialog(&#34;No folder name was given&#34;)
+                return
+            try:
+                os.mkdir(self.DB.server_path / proj_name / folder_name)
+            except FileExistsError:
+                ErrorDialog(&#34;This folder exists already&#34;)
+            except FileNotFoundError:
+                ErrorDialog(&#34;Folder could not be created\nDo you have write rights ?\nCreate folder manually&#34;)
+
+        if not self.DB.AddProject(proj_name, proj_desc, keywords):
+            ErrorDialog(&#39;Something went wrong\n check terminal output&#39;)
+        else:
+            self.ReadDB()
+            # self.populateGUI()
+            self.ProjDesc_edit.clear()
+            self.ProjKey_edit.clear()
+            self.expName_Edit.clear()
+
+    def addBB2DB(self):
+        &#34;&#34;&#34;
+        is called when AddBB button is called
+        checks inputs and sends them to DataBaseAccess
+        &#34;&#34;&#34;
+        bb_name = self.BBname_edit.text()
+        bb_desc = self.BBdesc_Edit.toPlainText()
+        folder_edit = self.folder_edit.text()
+        if self.folderMod_check.isChecked():
+            folderPre_edit = self.folderPre_edit.text()
+            folderProc_edit = self.folderProc_edit.text()
+            if not folderProc_edit:
+                folderProc_edit = None
+        else:
+            folderPre_edit = folder_edit
+            folderProc_edit = None
+
+        if not bb_name:
+            ErrorDialog(&#34;No name Added&#34;)
+            return
+        if not bb_desc:
+            ErrorDialog(&#34;No Description!&#34;)
+            return
+        if not folder_edit:
+            ErrorDialog(&#34;No Raw Folder!&#34;)
+            return
+
+        if not folderPre_edit:
+            ErrorDialog(&#34;No Preprocess Folder!&#34;)
+            return
+
+        if not self.DB.AddBBlock(bb_name, bb_desc, folder_edit, folderPre_edit, processed=folderProc_edit):
+            ErrorDialog(&#39;Something went wrong\n check terminal output&#39;)
+        else:
+            self.ReadDB()
+            # self.populateGUI()
+            self.BBname_edit.clear()
+            self.BBdesc_Edit.clear()
+            self.folder_edit.clear()
+            self.folderPre_edit.clear()
+            self.folderProc_edit.clear()
+
+    def addExptype2DB(self):
+        &#34;&#34;&#34;
+        is called when add Exp buttun is clicked
+        checks inputs and sends them to DataBaseAccess
+        &#34;&#34;&#34;
+        exp_name = self.ExpType_edit.text()
+        exp_desc = self.ExpDesc_edit.toPlainText()
+        blocks = [self.BBblock_list.item(p).text() for p in range(self.BBblock_list.count())]
+        if not exp_name:
+            ErrorDialog(&#34;No name Added&#34;)
+            return
+        if not exp_desc:
+            ErrorDialog(&#34;No Description!&#34;)
+            return
+        if not blocks:
+            ErrorDialog(&#34;No Blocks Added!&#34;)
+            return
+
+        if not self.DB.AddExpType(exp_name, exp_desc, blocks):
+            ErrorDialog(&#39;Something went wrong\n check terminal output&#39;)
+        else:
+            self.ReadDB()
+            # self.populateGUI()
+            self.BBblock_list.clear()
+            self.ExpType_edit.clear()
+            self.ExpDesc_edit.clear()
+
+    def addUser2DB(self):
+        &#34;&#34;&#34;
+          is called when add user button is clicked
+          checks inputs and sends them to DataBaseAccess
+          &#34;&#34;&#34;
+        if not self.userEdit.text():
+            ErrorDialog(&#39;NO user!&#39;)
+            return
+
+        if not self.DB.AddUser(self.userEdit.text()):
+            ErrorDialog(&#39;Something went wrong\n check terminal output&#39;)
+        else:
+            self.statusbar.showMessage(&#34;User %s added to DB&#34; % self.userEdit.text())
+            self.ReadDB()
+            # self.populateGUI()
+            self.userEdit.clear()
+
+    def ReadDB(self):
+        &#34;&#34;&#34;
+        accesses the DataJoint DB
+        &#34;&#34;&#34;
+        self.all_projects = self.DB.Project.fetch(&#34;project&#34;)
+        self.all_users = self.DB.User.fetch(&#34;user&#34;)
+        self.all_exptypes = self.DB.ExperimentTemplate.fetch(as_dict=True)
+        self.all_bblocks = self.DB.BuildingBlock.fetch(as_dict=True)
+        self.all_atlases = self.DB.BrainAtlas.fetch(as_dict=True)
+        self.exp_templates = {}
+        for exp_type in self.DB.ExperimentTemplate.fetch(&#39;experiment_template&#39;):
+            self.exp_templates[exp_type] = list(
+                (self.DB.ExperimentTemplate.TemplateBuild() &amp; &#34;experiment_template = &#39;%s&#39;&#34; % &#39;%s&#39; % exp_type).fetch(
+                    &#34;building_block&#34;))
+
+        self.populateGUI()
+
+def start_gui():
+    app = QApplication([])
+    win = AdminCommander()
+    win.show()
+    app.exec()
+
+if __name__ == &#39;__main__&#39;:
+    sys.exit(start_gui())</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="datastructure_tools.AdminCommander.start_gui"><code class="name flex">
+<span>def <span class="ident">start_gui</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def start_gui():
+    app = QApplication([])
+    win = AdminCommander()
+    win.show()
+    app.exec()</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="datastructure_tools.AdminCommander.AdminCommander"><code class="flex name class">
+<span>class <span class="ident">AdminCommander</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>QMainWindow(parent: typing.Optional[QWidget] = None, flags: Qt.WindowType = Qt.WindowFlags())</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class AdminCommander(QMainWindow):
+    def __init__(self):
+        super(AdminCommander, self).__init__()
+        self.path2file = Path(os.path.abspath(__file__))
+        uic.loadUi(os.path.join(self.path2file.parent,&#39;ui&#39;, &#39;AdminCommander_design.ui&#39;), self)
+        self.setWindowTitle(&#39;AdminCommander v.%s&#39; % VERSION)
+        self.connectSignalsSlots()
+
+        self.DB = DataBaseAccess()
+        if not self.DB.server_settings_correct:
+            for t_i in [1, 2, 3, 4, 5, 6]:
+                self.Tabs.setTabEnabled(t_i, False)
+            self.Tabs.setCurrentIndex(0)
+        if not self.DB.is_connected:
+            ErrorDialog(&#39;No connection to server possible&#39;)
+            self.was_notconnected_init = True
+        else:
+            self.was_notconnected_init = False
+            self.ReadDB()
+            self.DBIP_edit_2.setText(self.DB.cfg[&#39;SQLserver_cfg&#39;][&#39;host&#39;])
+            self.DBuser_edit_2.setText(self.DB.cfg[&#39;SQLserver_cfg&#39;][&#39;user&#39;])
+            self.DBname_edit_2.setText(self.DB.cfg[&#39;SQLserver_cfg&#39;][&#39;DataBase&#39;])
+        if not self.DB.server_path:
+            ErrorDialog(&#34;No correct serverpath was found, Please Enter one and restart&#34;)
+            self.ServerB.setEnabled(True)
+            self.textBrowser.setEnabled(True)
+            self.label_15.setEnabled(True)
+
+
+
+        self.threadpool = QThreadPool()
+        #print(&#34;Multithreading with maximum %d threads&#34; % self.threadpool.maxThreadCount())
+    def connectSignalsSlots(self):
+        self.actionExit.triggered.connect(self.close)
+        self.actionUpdateDB.triggered.connect(self.ReadDB)
+        self.CUserB.clicked.connect(self.addUser2DB)
+        self.ConfigB.clicked.connect(self.saveConfigs)
+        self.ProjectB.clicked.connect(self.addProject2DB)
+        self.BBlockB.clicked.connect(self.addBB2DB)
+        self.ExpTypeB.clicked.connect(self.addExptype2DB)
+        self.BBlockB_2.clicked.connect(self.addBBlock2widget)
+        self.PathB.clicked.connect(self.browseBCallback)
+        self.DBSaveB.clicked.connect(self.saveServerSettings)
+        self.ServerB.clicked.connect(self.browseServerCallback)
+        self.Project_combo_settings.currentIndexChanged.connect(self.changeExp)
+        self.ExpType_combo.currentIndexChanged.connect(self.changeType)
+        self.CopyAtlasesB.clicked.connect(self.copy_executer)
+        # self.settingsD.buttonBox.accepted.connect(self.getInfosSettings)
+        # self.projectD.buttonBox.accepted.connect(self.getInfosProject)
+        # self.bblockD.buttonBox.accepted.connect(self.getInfosBBblock)
+        self.APIKEY_saveButton.clicked.connect(self.saveAPIKEY)
+
+    def populateGUI(self):
+        self.ExistingUser_list.clear()
+        self.ExistingUser_list.addItems(self.all_users)
+        self.ExistingProject_list.clear()
+        self.ExistingProject_list.addItems(self.all_projects)
+        self.Existing_listBB.clear()
+        self.Existing_listBB.addItems([item[&#34;building_block&#34;] for item in self.all_bblocks])
+        self.Existing_listBB_2.clear()
+        self.Existing_listBB_2.addItems([item[&#34;raw&#34;] for item in self.all_bblocks])
+        self.Existing_listExp.clear()
+        self.Existing_listExp.addItems([item[&#34;experiment_template&#34;] for item in self.all_exptypes])
+        self.Existing_listExp_2.clear()
+        self.Existing_listExp_2.addItems([str(self.exp_templates[exp_type]) for exp_type in [item[&#34;experiment_template&#34;]
+                                                                                        for item in self.all_exptypes]])
+
+
+        self.User_combo.clear()
+        self.User_combo.addItems(self.all_users)
+        self.Project_combo_settings.clear()
+        self.Project_combo_settings.addItems(self.all_projects)
+        self.ExpType_combo.clear()
+        self.ExpType_combo.addItems([item[&#34;experiment_template&#34;] for item in self.all_exptypes])
+        self.BBlock_combo.clear()
+        self.BBlock_combo.addItems([item[&#34;building_block&#34;] for item in self.all_bblocks])
+        if self.DB.server_path:
+            potential_proj = [path for path in os.listdir(self.DB.server_path) if
+                              ((Path(self.DB.server_path) / path).is_dir()) and (path not in self.all_projects)]
+        else:
+            potential_proj = None
+        if not potential_proj:
+            self.ProjectB.setDisabled(True)
+            self.Project_combo.setDisabled(True)
+        else:
+            self.ProjectB.setDisabled(False)
+            self.Project_combo.setDisabled(False)
+            self.Project_combo.clear()
+            self.Project_combo.addItems(potential_proj)
+
+        self.Atlas_combo.clear()
+        self.Atlas_combo.addItems([item[&#34;brain_atlas&#34;] for item in self.all_atlases])
+
+        self.eLabFTW_linkEdit.setText(f&#34;{HOST.split(&#39;/api&#39;)[0]}/ucp.php?tab=4&#34;)
+        if self.DB.cfg.get(&#39;eLabAPIKEY&#39;, None):
+            self.elabAPIKEY.setText(self.DB.cfg.get(&#39;eLabAPIKEY&#39;))
+
+    def saveAPIKEY(self):
+        APIKEY = self.elabAPIKEY.text()
+        if eLabbookCommander(APIKEY, HOST,self.DB).test_connection():
+            self.DB.cfg[&#39;eLabAPIKEY&#39;] = APIKEY
+            with open(self.path2file.parent / &#34;user_config.json&#34;, &#34;rt&#34;) as fi:
+                user_config = json.load(fi)
+            user_config.update({&#39;eLabAPIKEY&#39;: APIKEY})
+            with open(self.path2file.parent / &#34;user_config.json&#34;, &#34;wt&#34;) as fi:
+                json.dump(user_config, fi)
+            self.APIKEY_saveButton.setText(&#39;saved&#39;)
+        else:
+            ErrorDialog(&#39;Wrong APIKEY, check your input&#39;)
+
+
+    def copy_complete(self):
+        self.statusbar.showMessage(&#39;Finished coping atlas files&#39;)
+        self.process_dialog.reset()
+    def handle_copy_errors(self,e):
+        if issubclass(e[0], FileExistsError):
+            ErrorDialog(&#39;Atlas is already copied!&#39;)
+        elif issubclass(e[0], FileNotFoundError):
+            ErrorDialog(&#39;AtlasFiles not found!/nIs serverpath correct?&#39;)
+    def copy_executer(self):
+        self.process_dialog = QProgressDialog(&#39;Copying Atlas files..&#39;,&#39;Abort&#39;,0,0,autoClose=True)
+        worker = Worker(self.copyAtlasFiles)  # Any other args, kwargs are passed to the run function
+        worker.signals.error.connect(self.handle_copy_errors)
+        worker.signals.finished.connect(self.copy_complete)
+        self.threadpool.start(worker)
+        self.statusbar.showMessage(&#39;Copying Atlas files..&#39;)
+        self.process_dialog.exec()
+
+    def copyAtlasFiles(self, progress_callback):
+        if self.DB.server_settings_correct:
+            atlas2copy = self.Atlas_combo.currentText()
+            ATLAS_PATH = Path([item[&#34;atlas_path&#34;] for item in self.all_atlases if item[&#34;brain_atlas&#34;] == atlas2copy][0])
+            if (Path(self.DB.server_path).parent.parent / ATLAS_PATH).exists():
+                atlas_path = Path(self.DB.server_path).parent.parent / ATLAS_PATH
+            else:
+                atlas_path = Path(self.DB.server_path).parent / ATLAS_PATH
+            # TODO remove single parent after changing the root directory
+
+            cur_path = os.path.abspath(os.path.dirname(__file__))
+            if not (Path(cur_path) / &#34;Atlas_files&#34;).exists():
+                os.mkdir(Path(cur_path) / &#34;Atlas_files&#34;)
+
+            QApplication.processEvents()
+            shutil.copytree(atlas_path, Path(cur_path) / &#34;Atlas_files&#34; / atlas2copy)
+
+
+    def changeType(self):
+        try:
+            bblock_available = self.exp_templates[self.ExpType_combo.currentText()]
+            self.ExpType_combo_2.clear()
+            self.ExpType_combo_2.addItems(bblock_available)
+        except KeyError:  # stupid error due to change callbacks
+            pass
+
+    def changeExp(self):
+        if self.DB.server_path:
+            experiments_available = [path for path in
+                                     os.listdir(self.DB.server_path / self.Project_combo_settings.currentText())
+                                     if
+                                     (self.DB.server_path / self.Project_combo_settings.currentText() / path).is_dir()]
+        else:
+            experiments_available = []
+        for id, exp in enumerate(experiments_available):
+            if exp == &#34;misc&#34;:
+                experiments_available.pop(id)
+        self.ExpName_combo.clear()
+        self.ExpName_combo.addItems(experiments_available)
+
+    def addBBlock2widget(self):
+        bbloc2add = self.BBlock_combo.currentText()
+        if not self.BBblock_list.findItems(bbloc2add, Qt.MatchFlag.MatchExactly):
+            self.BBblock_list.addItem(bbloc2add)
+
+    def saveConfigs(self):
+        if not self.DB.server_path:  # if not serverpath under defaults
+            server_paths = self.DB.default_server_paths
+            if not self.textBrowser.toPlainText():
+                ErrorDialog(&#34;No serverpath added!&#34;)
+                return
+            else:
+                server_paths.append(self.textBrowser.toPlainText())
+        else:
+            server_paths = self.DB.default_server_paths
+
+        initialdir = {}
+        for p in range(self.listWidget.count()):
+            initialdir[self.listWidget.item(p).text()] = self.listWidget_2.item(p).text()
+        user_config = {&#34;Server_path&#34;: server_paths,
+                       &#34;user_id&#34;: self.User_combo.currentText(),
+                       &#34;project&#34;: self.Project_combo_settings.currentText(),
+                       &#34;experiment_template&#34;: self.ExpType_combo.currentText(),
+                       &#34;sub_experiment&#34;: self.ExpName_combo.currentText(),
+                       &#34;initialDir&#34;: initialdir}
+
+        with open(self.path2file.parent / &#34;user_config.json&#34;, &#34;wt&#34;) as fi:
+            json.dump(user_config, fi)
+
+        self.statusbar.showMessage(&#39;User config file was saved&#39;)
+
+    def saveServerSettings(self):
+        if not self.DBIP_edit.text():
+            ErrorDialog(&#34;No IP&#34;)
+            return
+        if not self.DBuser_edit.text():
+            ErrorDialog(&#34;No user&#34;)
+            return
+        if not self.DBname_edit.text():
+            ErrorDialog(&#34;No DB name !&#34;)
+            return
+
+        server_settings = {&#34;host&#34;: self.DBIP_edit.text(), &#34;user&#34;: self.DBuser_edit.text(),
+                           &#34;password&#34;: self.DBpass_edit.text(), &#34;DataBase&#34;: self.DBname_edit.text()}
+        settings = {&#34;SQLserver_cfg&#34;: server_settings}
+
+        import datajoint as dj
+        dj.config[&#39;database.host&#39;] = settings[&#39;SQLserver_cfg&#39;][&#39;host&#39;]
+        dj.config[&#39;database.user&#39;] = settings[&#39;SQLserver_cfg&#39;][&#39;user&#39;]
+        dj.config[&#39;database.password&#39;] = settings[&#39;SQLserver_cfg&#39;][&#39;password&#39;]
+        try:
+            dj.conn(reset=True)
+            self.DBIP_edit_2.setText(dj.config[&#39;database.host&#39;])
+            self.DBuser_edit_2.setText(dj.config[&#39;database.user&#39;])
+            self.DBname_edit_2.setText(settings[&#39;SQLserver_cfg&#39;][&#34;DataBase&#34;])
+        except OperationalError:
+            ErrorDialog(&#39;Wrong user or password? No connection possible&#39;)
+            self.DBIP_edit_2.setText(&#39;Not Connected&#39;)
+            self.DBuser_edit_2.setText(&#39;Not Connected&#39;)
+            self.DBname_edit_2.setText(&#39;Not Connected&#39;)
+            return
+        with open(self.path2file.parent / &#39;DataJoint&#39; / &#34;server_config.json&#34;, &#34;wt&#34;) as fi:
+            json.dump(settings, fi)
+        self.labelConnected.setText(&#34;Connected&#34;)
+        self.statusbar.showMessage(&#39;DB config file was saved&#39;)
+
+        if not self.was_notconnected_init:
+            InfoDialog(&#39;server settings changed, restart application&#39;)
+            # need to restart python, other all previous references to schemas are still pointing to old objects
+            self.close()
+        for t_i in [1, 2, 3, 4, 5, 6]:
+            self.Tabs.setTabEnabled(t_i, True)
+
+        self.DB.readConfigs()
+        self.DB._connect()
+        if self.DB.is_connected:  # only if connected proceed
+            self.DB._instanciateSchemas()
+        self.ReadDB()
+
+    def browseServerCallback(self):
+        path = QFileDialog.getExistingDirectory(self)
+        self.textBrowser.setText(path)
+
+    def browseBCallback(self):
+        path = QFileDialog.getExistingDirectory(self)
+        bbloc2add = self.ExpType_combo_2.currentText()
+        if not self.listWidget.findItems(bbloc2add, Qt.MatchFlag.MatchExactly):
+            self.listWidget.insertItem(0, bbloc2add)
+            self.listWidget_2.insertItem(0, path)
+
+    def addProject2DB(self):
+        &#34;&#34;&#34;
+        is called when add Exp button is clicked
+        checks inputs and sends them to DataBaseAccess
+        &#34;&#34;&#34;
+        proj_name = self.Project_combo.currentText()
+        proj_desc = self.ProjDesc_edit.toPlainText()
+        keywords = [keyword.strip().lower() for keyword in self.ProjKey_edit.toPlainText().replace(&#39;,&#39;, &#39;/&#39;).split(&#39;/&#39;)]
+
+        if not proj_desc:
+            ErrorDialog(&#34;No Description!&#34;)
+            return
+
+        if self.CreateFolderB.isChecked():
+            folder_name = self.expName_Edit.text()
+            if not folder_name:
+                ErrorDialog(&#34;No folder name was given&#34;)
+                return
+            try:
+                os.mkdir(self.DB.server_path / proj_name / folder_name)
+            except FileExistsError:
+                ErrorDialog(&#34;This folder exists already&#34;)
+            except FileNotFoundError:
+                ErrorDialog(&#34;Folder could not be created\nDo you have write rights ?\nCreate folder manually&#34;)
+
+        if not self.DB.AddProject(proj_name, proj_desc, keywords):
+            ErrorDialog(&#39;Something went wrong\n check terminal output&#39;)
+        else:
+            self.ReadDB()
+            # self.populateGUI()
+            self.ProjDesc_edit.clear()
+            self.ProjKey_edit.clear()
+            self.expName_Edit.clear()
+
+    def addBB2DB(self):
+        &#34;&#34;&#34;
+        is called when AddBB button is called
+        checks inputs and sends them to DataBaseAccess
+        &#34;&#34;&#34;
+        bb_name = self.BBname_edit.text()
+        bb_desc = self.BBdesc_Edit.toPlainText()
+        folder_edit = self.folder_edit.text()
+        if self.folderMod_check.isChecked():
+            folderPre_edit = self.folderPre_edit.text()
+            folderProc_edit = self.folderProc_edit.text()
+            if not folderProc_edit:
+                folderProc_edit = None
+        else:
+            folderPre_edit = folder_edit
+            folderProc_edit = None
+
+        if not bb_name:
+            ErrorDialog(&#34;No name Added&#34;)
+            return
+        if not bb_desc:
+            ErrorDialog(&#34;No Description!&#34;)
+            return
+        if not folder_edit:
+            ErrorDialog(&#34;No Raw Folder!&#34;)
+            return
+
+        if not folderPre_edit:
+            ErrorDialog(&#34;No Preprocess Folder!&#34;)
+            return
+
+        if not self.DB.AddBBlock(bb_name, bb_desc, folder_edit, folderPre_edit, processed=folderProc_edit):
+            ErrorDialog(&#39;Something went wrong\n check terminal output&#39;)
+        else:
+            self.ReadDB()
+            # self.populateGUI()
+            self.BBname_edit.clear()
+            self.BBdesc_Edit.clear()
+            self.folder_edit.clear()
+            self.folderPre_edit.clear()
+            self.folderProc_edit.clear()
+
+    def addExptype2DB(self):
+        &#34;&#34;&#34;
+        is called when add Exp buttun is clicked
+        checks inputs and sends them to DataBaseAccess
+        &#34;&#34;&#34;
+        exp_name = self.ExpType_edit.text()
+        exp_desc = self.ExpDesc_edit.toPlainText()
+        blocks = [self.BBblock_list.item(p).text() for p in range(self.BBblock_list.count())]
+        if not exp_name:
+            ErrorDialog(&#34;No name Added&#34;)
+            return
+        if not exp_desc:
+            ErrorDialog(&#34;No Description!&#34;)
+            return
+        if not blocks:
+            ErrorDialog(&#34;No Blocks Added!&#34;)
+            return
+
+        if not self.DB.AddExpType(exp_name, exp_desc, blocks):
+            ErrorDialog(&#39;Something went wrong\n check terminal output&#39;)
+        else:
+            self.ReadDB()
+            # self.populateGUI()
+            self.BBblock_list.clear()
+            self.ExpType_edit.clear()
+            self.ExpDesc_edit.clear()
+
+    def addUser2DB(self):
+        &#34;&#34;&#34;
+          is called when add user button is clicked
+          checks inputs and sends them to DataBaseAccess
+          &#34;&#34;&#34;
+        if not self.userEdit.text():
+            ErrorDialog(&#39;NO user!&#39;)
+            return
+
+        if not self.DB.AddUser(self.userEdit.text()):
+            ErrorDialog(&#39;Something went wrong\n check terminal output&#39;)
+        else:
+            self.statusbar.showMessage(&#34;User %s added to DB&#34; % self.userEdit.text())
+            self.ReadDB()
+            # self.populateGUI()
+            self.userEdit.clear()
+
+    def ReadDB(self):
+        &#34;&#34;&#34;
+        accesses the DataJoint DB
+        &#34;&#34;&#34;
+        self.all_projects = self.DB.Project.fetch(&#34;project&#34;)
+        self.all_users = self.DB.User.fetch(&#34;user&#34;)
+        self.all_exptypes = self.DB.ExperimentTemplate.fetch(as_dict=True)
+        self.all_bblocks = self.DB.BuildingBlock.fetch(as_dict=True)
+        self.all_atlases = self.DB.BrainAtlas.fetch(as_dict=True)
+        self.exp_templates = {}
+        for exp_type in self.DB.ExperimentTemplate.fetch(&#39;experiment_template&#39;):
+            self.exp_templates[exp_type] = list(
+                (self.DB.ExperimentTemplate.TemplateBuild() &amp; &#34;experiment_template = &#39;%s&#39;&#34; % &#39;%s&#39; % exp_type).fetch(
+                    &#34;building_block&#34;))
+
+        self.populateGUI()</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>PyQt6.QtWidgets.QMainWindow</li>
+<li>PyQt6.QtWidgets.QWidget</li>
+<li>PyQt6.QtCore.QObject</li>
+<li>PyQt6.sip.wrapper</li>
+<li>PyQt6.QtGui.QPaintDevice</li>
+<li>PyQt6.sip.simplewrapper</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="datastructure_tools.AdminCommander.AdminCommander.ReadDB"><code class="name flex">
+<span>def <span class="ident">ReadDB</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>accesses the DataJoint DB</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def ReadDB(self):
+    &#34;&#34;&#34;
+    accesses the DataJoint DB
+    &#34;&#34;&#34;
+    self.all_projects = self.DB.Project.fetch(&#34;project&#34;)
+    self.all_users = self.DB.User.fetch(&#34;user&#34;)
+    self.all_exptypes = self.DB.ExperimentTemplate.fetch(as_dict=True)
+    self.all_bblocks = self.DB.BuildingBlock.fetch(as_dict=True)
+    self.all_atlases = self.DB.BrainAtlas.fetch(as_dict=True)
+    self.exp_templates = {}
+    for exp_type in self.DB.ExperimentTemplate.fetch(&#39;experiment_template&#39;):
+        self.exp_templates[exp_type] = list(
+            (self.DB.ExperimentTemplate.TemplateBuild() &amp; &#34;experiment_template = &#39;%s&#39;&#34; % &#39;%s&#39; % exp_type).fetch(
+                &#34;building_block&#34;))
+
+    self.populateGUI()</code></pre>
+</details>
+</dd>
+<dt id="datastructure_tools.AdminCommander.AdminCommander.addBB2DB"><code class="name flex">
+<span>def <span class="ident">addBB2DB</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>is called when AddBB button is called
+checks inputs and sends them to DataBaseAccess</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def addBB2DB(self):
+    &#34;&#34;&#34;
+    is called when AddBB button is called
+    checks inputs and sends them to DataBaseAccess
+    &#34;&#34;&#34;
+    bb_name = self.BBname_edit.text()
+    bb_desc = self.BBdesc_Edit.toPlainText()
+    folder_edit = self.folder_edit.text()
+    if self.folderMod_check.isChecked():
+        folderPre_edit = self.folderPre_edit.text()
+        folderProc_edit = self.folderProc_edit.text()
+        if not folderProc_edit:
+            folderProc_edit = None
+    else:
+        folderPre_edit = folder_edit
+        folderProc_edit = None
+
+    if not bb_name:
+        ErrorDialog(&#34;No name Added&#34;)
+        return
+    if not bb_desc:
+        ErrorDialog(&#34;No Description!&#34;)
+        return
+    if not folder_edit:
+        ErrorDialog(&#34;No Raw Folder!&#34;)
+        return
+
+    if not folderPre_edit:
+        ErrorDialog(&#34;No Preprocess Folder!&#34;)
+        return
+
+    if not self.DB.AddBBlock(bb_name, bb_desc, folder_edit, folderPre_edit, processed=folderProc_edit):
+        ErrorDialog(&#39;Something went wrong\n check terminal output&#39;)
+    else:
+        self.ReadDB()
+        # self.populateGUI()
+        self.BBname_edit.clear()
+        self.BBdesc_Edit.clear()
+        self.folder_edit.clear()
+        self.folderPre_edit.clear()
+        self.folderProc_edit.clear()</code></pre>
+</details>
+</dd>
+<dt id="datastructure_tools.AdminCommander.AdminCommander.addBBlock2widget"><code class="name flex">
+<span>def <span class="ident">addBBlock2widget</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def addBBlock2widget(self):
+    bbloc2add = self.BBlock_combo.currentText()
+    if not self.BBblock_list.findItems(bbloc2add, Qt.MatchFlag.MatchExactly):
+        self.BBblock_list.addItem(bbloc2add)</code></pre>
+</details>
+</dd>
+<dt id="datastructure_tools.AdminCommander.AdminCommander.addExptype2DB"><code class="name flex">
+<span>def <span class="ident">addExptype2DB</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>is called when add Exp buttun is clicked
+checks inputs and sends them to DataBaseAccess</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def addExptype2DB(self):
+    &#34;&#34;&#34;
+    is called when add Exp buttun is clicked
+    checks inputs and sends them to DataBaseAccess
+    &#34;&#34;&#34;
+    exp_name = self.ExpType_edit.text()
+    exp_desc = self.ExpDesc_edit.toPlainText()
+    blocks = [self.BBblock_list.item(p).text() for p in range(self.BBblock_list.count())]
+    if not exp_name:
+        ErrorDialog(&#34;No name Added&#34;)
+        return
+    if not exp_desc:
+        ErrorDialog(&#34;No Description!&#34;)
+        return
+    if not blocks:
+        ErrorDialog(&#34;No Blocks Added!&#34;)
+        return
+
+    if not self.DB.AddExpType(exp_name, exp_desc, blocks):
+        ErrorDialog(&#39;Something went wrong\n check terminal output&#39;)
+    else:
+        self.ReadDB()
+        # self.populateGUI()
+        self.BBblock_list.clear()
+        self.ExpType_edit.clear()
+        self.ExpDesc_edit.clear()</code></pre>
+</details>
+</dd>
+<dt id="datastructure_tools.AdminCommander.AdminCommander.addProject2DB"><code class="name flex">
+<span>def <span class="ident">addProject2DB</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>is called when add Exp button is clicked
+checks inputs and sends them to DataBaseAccess</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def addProject2DB(self):
+    &#34;&#34;&#34;
+    is called when add Exp button is clicked
+    checks inputs and sends them to DataBaseAccess
+    &#34;&#34;&#34;
+    proj_name = self.Project_combo.currentText()
+    proj_desc = self.ProjDesc_edit.toPlainText()
+    keywords = [keyword.strip().lower() for keyword in self.ProjKey_edit.toPlainText().replace(&#39;,&#39;, &#39;/&#39;).split(&#39;/&#39;)]
+
+    if not proj_desc:
+        ErrorDialog(&#34;No Description!&#34;)
+        return
+
+    if self.CreateFolderB.isChecked():
+        folder_name = self.expName_Edit.text()
+        if not folder_name:
+            ErrorDialog(&#34;No folder name was given&#34;)
+            return
+        try:
+            os.mkdir(self.DB.server_path / proj_name / folder_name)
+        except FileExistsError:
+            ErrorDialog(&#34;This folder exists already&#34;)
+        except FileNotFoundError:
+            ErrorDialog(&#34;Folder could not be created\nDo you have write rights ?\nCreate folder manually&#34;)
+
+    if not self.DB.AddProject(proj_name, proj_desc, keywords):
+        ErrorDialog(&#39;Something went wrong\n check terminal output&#39;)
+    else:
+        self.ReadDB()
+        # self.populateGUI()
+        self.ProjDesc_edit.clear()
+        self.ProjKey_edit.clear()
+        self.expName_Edit.clear()</code></pre>
+</details>
+</dd>
+<dt id="datastructure_tools.AdminCommander.AdminCommander.addUser2DB"><code class="name flex">
+<span>def <span class="ident">addUser2DB</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>is called when add user button is clicked
+checks inputs and sends them to DataBaseAccess</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def addUser2DB(self):
+    &#34;&#34;&#34;
+      is called when add user button is clicked
+      checks inputs and sends them to DataBaseAccess
+      &#34;&#34;&#34;
+    if not self.userEdit.text():
+        ErrorDialog(&#39;NO user!&#39;)
+        return
+
+    if not self.DB.AddUser(self.userEdit.text()):
+        ErrorDialog(&#39;Something went wrong\n check terminal output&#39;)
+    else:
+        self.statusbar.showMessage(&#34;User %s added to DB&#34; % self.userEdit.text())
+        self.ReadDB()
+        # self.populateGUI()
+        self.userEdit.clear()</code></pre>
+</details>
+</dd>
+<dt id="datastructure_tools.AdminCommander.AdminCommander.browseBCallback"><code class="name flex">
+<span>def <span class="ident">browseBCallback</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def browseBCallback(self):
+    path = QFileDialog.getExistingDirectory(self)
+    bbloc2add = self.ExpType_combo_2.currentText()
+    if not self.listWidget.findItems(bbloc2add, Qt.MatchFlag.MatchExactly):
+        self.listWidget.insertItem(0, bbloc2add)
+        self.listWidget_2.insertItem(0, path)</code></pre>
+</details>
+</dd>
+<dt id="datastructure_tools.AdminCommander.AdminCommander.browseServerCallback"><code class="name flex">
+<span>def <span class="ident">browseServerCallback</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def browseServerCallback(self):
+    path = QFileDialog.getExistingDirectory(self)
+    self.textBrowser.setText(path)</code></pre>
+</details>
+</dd>
+<dt id="datastructure_tools.AdminCommander.AdminCommander.changeExp"><code class="name flex">
+<span>def <span class="ident">changeExp</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def changeExp(self):
+    if self.DB.server_path:
+        experiments_available = [path for path in
+                                 os.listdir(self.DB.server_path / self.Project_combo_settings.currentText())
+                                 if
+                                 (self.DB.server_path / self.Project_combo_settings.currentText() / path).is_dir()]
+    else:
+        experiments_available = []
+    for id, exp in enumerate(experiments_available):
+        if exp == &#34;misc&#34;:
+            experiments_available.pop(id)
+    self.ExpName_combo.clear()
+    self.ExpName_combo.addItems(experiments_available)</code></pre>
+</details>
+</dd>
+<dt id="datastructure_tools.AdminCommander.AdminCommander.changeType"><code class="name flex">
+<span>def <span class="ident">changeType</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def changeType(self):
+    try:
+        bblock_available = self.exp_templates[self.ExpType_combo.currentText()]
+        self.ExpType_combo_2.clear()
+        self.ExpType_combo_2.addItems(bblock_available)
+    except KeyError:  # stupid error due to change callbacks
+        pass</code></pre>
+</details>
+</dd>
+<dt id="datastructure_tools.AdminCommander.AdminCommander.connectSignalsSlots"><code class="name flex">
+<span>def <span class="ident">connectSignalsSlots</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def connectSignalsSlots(self):
+    self.actionExit.triggered.connect(self.close)
+    self.actionUpdateDB.triggered.connect(self.ReadDB)
+    self.CUserB.clicked.connect(self.addUser2DB)
+    self.ConfigB.clicked.connect(self.saveConfigs)
+    self.ProjectB.clicked.connect(self.addProject2DB)
+    self.BBlockB.clicked.connect(self.addBB2DB)
+    self.ExpTypeB.clicked.connect(self.addExptype2DB)
+    self.BBlockB_2.clicked.connect(self.addBBlock2widget)
+    self.PathB.clicked.connect(self.browseBCallback)
+    self.DBSaveB.clicked.connect(self.saveServerSettings)
+    self.ServerB.clicked.connect(self.browseServerCallback)
+    self.Project_combo_settings.currentIndexChanged.connect(self.changeExp)
+    self.ExpType_combo.currentIndexChanged.connect(self.changeType)
+    self.CopyAtlasesB.clicked.connect(self.copy_executer)
+    # self.settingsD.buttonBox.accepted.connect(self.getInfosSettings)
+    # self.projectD.buttonBox.accepted.connect(self.getInfosProject)
+    # self.bblockD.buttonBox.accepted.connect(self.getInfosBBblock)
+    self.APIKEY_saveButton.clicked.connect(self.saveAPIKEY)</code></pre>
+</details>
+</dd>
+<dt id="datastructure_tools.AdminCommander.AdminCommander.copyAtlasFiles"><code class="name flex">
+<span>def <span class="ident">copyAtlasFiles</span></span>(<span>self, progress_callback)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def copyAtlasFiles(self, progress_callback):
+    if self.DB.server_settings_correct:
+        atlas2copy = self.Atlas_combo.currentText()
+        ATLAS_PATH = Path([item[&#34;atlas_path&#34;] for item in self.all_atlases if item[&#34;brain_atlas&#34;] == atlas2copy][0])
+        if (Path(self.DB.server_path).parent.parent / ATLAS_PATH).exists():
+            atlas_path = Path(self.DB.server_path).parent.parent / ATLAS_PATH
+        else:
+            atlas_path = Path(self.DB.server_path).parent / ATLAS_PATH
+        # TODO remove single parent after changing the root directory
+
+        cur_path = os.path.abspath(os.path.dirname(__file__))
+        if not (Path(cur_path) / &#34;Atlas_files&#34;).exists():
+            os.mkdir(Path(cur_path) / &#34;Atlas_files&#34;)
+
+        QApplication.processEvents()
+        shutil.copytree(atlas_path, Path(cur_path) / &#34;Atlas_files&#34; / atlas2copy)</code></pre>
+</details>
+</dd>
+<dt id="datastructure_tools.AdminCommander.AdminCommander.copy_complete"><code class="name flex">
+<span>def <span class="ident">copy_complete</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def copy_complete(self):
+    self.statusbar.showMessage(&#39;Finished coping atlas files&#39;)
+    self.process_dialog.reset()</code></pre>
+</details>
+</dd>
+<dt id="datastructure_tools.AdminCommander.AdminCommander.copy_executer"><code class="name flex">
+<span>def <span class="ident">copy_executer</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def copy_executer(self):
+    self.process_dialog = QProgressDialog(&#39;Copying Atlas files..&#39;,&#39;Abort&#39;,0,0,autoClose=True)
+    worker = Worker(self.copyAtlasFiles)  # Any other args, kwargs are passed to the run function
+    worker.signals.error.connect(self.handle_copy_errors)
+    worker.signals.finished.connect(self.copy_complete)
+    self.threadpool.start(worker)
+    self.statusbar.showMessage(&#39;Copying Atlas files..&#39;)
+    self.process_dialog.exec()</code></pre>
+</details>
+</dd>
+<dt id="datastructure_tools.AdminCommander.AdminCommander.handle_copy_errors"><code class="name flex">
+<span>def <span class="ident">handle_copy_errors</span></span>(<span>self, e)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def handle_copy_errors(self,e):
+    if issubclass(e[0], FileExistsError):
+        ErrorDialog(&#39;Atlas is already copied!&#39;)
+    elif issubclass(e[0], FileNotFoundError):
+        ErrorDialog(&#39;AtlasFiles not found!/nIs serverpath correct?&#39;)</code></pre>
+</details>
+</dd>
+<dt id="datastructure_tools.AdminCommander.AdminCommander.populateGUI"><code class="name flex">
+<span>def <span class="ident">populateGUI</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def populateGUI(self):
+    self.ExistingUser_list.clear()
+    self.ExistingUser_list.addItems(self.all_users)
+    self.ExistingProject_list.clear()
+    self.ExistingProject_list.addItems(self.all_projects)
+    self.Existing_listBB.clear()
+    self.Existing_listBB.addItems([item[&#34;building_block&#34;] for item in self.all_bblocks])
+    self.Existing_listBB_2.clear()
+    self.Existing_listBB_2.addItems([item[&#34;raw&#34;] for item in self.all_bblocks])
+    self.Existing_listExp.clear()
+    self.Existing_listExp.addItems([item[&#34;experiment_template&#34;] for item in self.all_exptypes])
+    self.Existing_listExp_2.clear()
+    self.Existing_listExp_2.addItems([str(self.exp_templates[exp_type]) for exp_type in [item[&#34;experiment_template&#34;]
+                                                                                    for item in self.all_exptypes]])
+
+
+    self.User_combo.clear()
+    self.User_combo.addItems(self.all_users)
+    self.Project_combo_settings.clear()
+    self.Project_combo_settings.addItems(self.all_projects)
+    self.ExpType_combo.clear()
+    self.ExpType_combo.addItems([item[&#34;experiment_template&#34;] for item in self.all_exptypes])
+    self.BBlock_combo.clear()
+    self.BBlock_combo.addItems([item[&#34;building_block&#34;] for item in self.all_bblocks])
+    if self.DB.server_path:
+        potential_proj = [path for path in os.listdir(self.DB.server_path) if
+                          ((Path(self.DB.server_path) / path).is_dir()) and (path not in self.all_projects)]
+    else:
+        potential_proj = None
+    if not potential_proj:
+        self.ProjectB.setDisabled(True)
+        self.Project_combo.setDisabled(True)
+    else:
+        self.ProjectB.setDisabled(False)
+        self.Project_combo.setDisabled(False)
+        self.Project_combo.clear()
+        self.Project_combo.addItems(potential_proj)
+
+    self.Atlas_combo.clear()
+    self.Atlas_combo.addItems([item[&#34;brain_atlas&#34;] for item in self.all_atlases])
+
+    self.eLabFTW_linkEdit.setText(f&#34;{HOST.split(&#39;/api&#39;)[0]}/ucp.php?tab=4&#34;)
+    if self.DB.cfg.get(&#39;eLabAPIKEY&#39;, None):
+        self.elabAPIKEY.setText(self.DB.cfg.get(&#39;eLabAPIKEY&#39;))</code></pre>
+</details>
+</dd>
+<dt id="datastructure_tools.AdminCommander.AdminCommander.saveAPIKEY"><code class="name flex">
+<span>def <span class="ident">saveAPIKEY</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def saveAPIKEY(self):
+    APIKEY = self.elabAPIKEY.text()
+    if eLabbookCommander(APIKEY, HOST,self.DB).test_connection():
+        self.DB.cfg[&#39;eLabAPIKEY&#39;] = APIKEY
+        with open(self.path2file.parent / &#34;user_config.json&#34;, &#34;rt&#34;) as fi:
+            user_config = json.load(fi)
+        user_config.update({&#39;eLabAPIKEY&#39;: APIKEY})
+        with open(self.path2file.parent / &#34;user_config.json&#34;, &#34;wt&#34;) as fi:
+            json.dump(user_config, fi)
+        self.APIKEY_saveButton.setText(&#39;saved&#39;)
+    else:
+        ErrorDialog(&#39;Wrong APIKEY, check your input&#39;)</code></pre>
+</details>
+</dd>
+<dt id="datastructure_tools.AdminCommander.AdminCommander.saveConfigs"><code class="name flex">
+<span>def <span class="ident">saveConfigs</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def saveConfigs(self):
+    if not self.DB.server_path:  # if not serverpath under defaults
+        server_paths = self.DB.default_server_paths
+        if not self.textBrowser.toPlainText():
+            ErrorDialog(&#34;No serverpath added!&#34;)
+            return
+        else:
+            server_paths.append(self.textBrowser.toPlainText())
+    else:
+        server_paths = self.DB.default_server_paths
+
+    initialdir = {}
+    for p in range(self.listWidget.count()):
+        initialdir[self.listWidget.item(p).text()] = self.listWidget_2.item(p).text()
+    user_config = {&#34;Server_path&#34;: server_paths,
+                   &#34;user_id&#34;: self.User_combo.currentText(),
+                   &#34;project&#34;: self.Project_combo_settings.currentText(),
+                   &#34;experiment_template&#34;: self.ExpType_combo.currentText(),
+                   &#34;sub_experiment&#34;: self.ExpName_combo.currentText(),
+                   &#34;initialDir&#34;: initialdir}
+
+    with open(self.path2file.parent / &#34;user_config.json&#34;, &#34;wt&#34;) as fi:
+        json.dump(user_config, fi)
+
+    self.statusbar.showMessage(&#39;User config file was saved&#39;)</code></pre>
+</details>
+</dd>
+<dt id="datastructure_tools.AdminCommander.AdminCommander.saveServerSettings"><code class="name flex">
+<span>def <span class="ident">saveServerSettings</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def saveServerSettings(self):
+    if not self.DBIP_edit.text():
+        ErrorDialog(&#34;No IP&#34;)
+        return
+    if not self.DBuser_edit.text():
+        ErrorDialog(&#34;No user&#34;)
+        return
+    if not self.DBname_edit.text():
+        ErrorDialog(&#34;No DB name !&#34;)
+        return
+
+    server_settings = {&#34;host&#34;: self.DBIP_edit.text(), &#34;user&#34;: self.DBuser_edit.text(),
+                       &#34;password&#34;: self.DBpass_edit.text(), &#34;DataBase&#34;: self.DBname_edit.text()}
+    settings = {&#34;SQLserver_cfg&#34;: server_settings}
+
+    import datajoint as dj
+    dj.config[&#39;database.host&#39;] = settings[&#39;SQLserver_cfg&#39;][&#39;host&#39;]
+    dj.config[&#39;database.user&#39;] = settings[&#39;SQLserver_cfg&#39;][&#39;user&#39;]
+    dj.config[&#39;database.password&#39;] = settings[&#39;SQLserver_cfg&#39;][&#39;password&#39;]
+    try:
+        dj.conn(reset=True)
+        self.DBIP_edit_2.setText(dj.config[&#39;database.host&#39;])
+        self.DBuser_edit_2.setText(dj.config[&#39;database.user&#39;])
+        self.DBname_edit_2.setText(settings[&#39;SQLserver_cfg&#39;][&#34;DataBase&#34;])
+    except OperationalError:
+        ErrorDialog(&#39;Wrong user or password? No connection possible&#39;)
+        self.DBIP_edit_2.setText(&#39;Not Connected&#39;)
+        self.DBuser_edit_2.setText(&#39;Not Connected&#39;)
+        self.DBname_edit_2.setText(&#39;Not Connected&#39;)
+        return
+    with open(self.path2file.parent / &#39;DataJoint&#39; / &#34;server_config.json&#34;, &#34;wt&#34;) as fi:
+        json.dump(settings, fi)
+    self.labelConnected.setText(&#34;Connected&#34;)
+    self.statusbar.showMessage(&#39;DB config file was saved&#39;)
+
+    if not self.was_notconnected_init:
+        InfoDialog(&#39;server settings changed, restart application&#39;)
+        # need to restart python, other all previous references to schemas are still pointing to old objects
+        self.close()
+    for t_i in [1, 2, 3, 4, 5, 6]:
+        self.Tabs.setTabEnabled(t_i, True)
+
+    self.DB.readConfigs()
+    self.DB._connect()
+    if self.DB.is_connected:  # only if connected proceed
+        self.DB._instanciateSchemas()
+    self.ReadDB()</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="datastructure_tools" href="index.html">datastructure_tools</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="datastructure_tools.AdminCommander.start_gui" href="#datastructure_tools.AdminCommander.start_gui">start_gui</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="datastructure_tools.AdminCommander.AdminCommander" href="#datastructure_tools.AdminCommander.AdminCommander">AdminCommander</a></code></h4>
+<ul class="">
+<li><code><a title="datastructure_tools.AdminCommander.AdminCommander.ReadDB" href="#datastructure_tools.AdminCommander.AdminCommander.ReadDB">ReadDB</a></code></li>
+<li><code><a title="datastructure_tools.AdminCommander.AdminCommander.addBB2DB" href="#datastructure_tools.AdminCommander.AdminCommander.addBB2DB">addBB2DB</a></code></li>
+<li><code><a title="datastructure_tools.AdminCommander.AdminCommander.addBBlock2widget" href="#datastructure_tools.AdminCommander.AdminCommander.addBBlock2widget">addBBlock2widget</a></code></li>
+<li><code><a title="datastructure_tools.AdminCommander.AdminCommander.addExptype2DB" href="#datastructure_tools.AdminCommander.AdminCommander.addExptype2DB">addExptype2DB</a></code></li>
+<li><code><a title="datastructure_tools.AdminCommander.AdminCommander.addProject2DB" href="#datastructure_tools.AdminCommander.AdminCommander.addProject2DB">addProject2DB</a></code></li>
+<li><code><a title="datastructure_tools.AdminCommander.AdminCommander.addUser2DB" href="#datastructure_tools.AdminCommander.AdminCommander.addUser2DB">addUser2DB</a></code></li>
+<li><code><a title="datastructure_tools.AdminCommander.AdminCommander.browseBCallback" href="#datastructure_tools.AdminCommander.AdminCommander.browseBCallback">browseBCallback</a></code></li>
+<li><code><a title="datastructure_tools.AdminCommander.AdminCommander.browseServerCallback" href="#datastructure_tools.AdminCommander.AdminCommander.browseServerCallback">browseServerCallback</a></code></li>
+<li><code><a title="datastructure_tools.AdminCommander.AdminCommander.changeExp" href="#datastructure_tools.AdminCommander.AdminCommander.changeExp">changeExp</a></code></li>
+<li><code><a title="datastructure_tools.AdminCommander.AdminCommander.changeType" href="#datastructure_tools.AdminCommander.AdminCommander.changeType">changeType</a></code></li>
+<li><code><a title="datastructure_tools.AdminCommander.AdminCommander.connectSignalsSlots" href="#datastructure_tools.AdminCommander.AdminCommander.connectSignalsSlots">connectSignalsSlots</a></code></li>
+<li><code><a title="datastructure_tools.AdminCommander.AdminCommander.copyAtlasFiles" href="#datastructure_tools.AdminCommander.AdminCommander.copyAtlasFiles">copyAtlasFiles</a></code></li>
+<li><code><a title="datastructure_tools.AdminCommander.AdminCommander.copy_complete" href="#datastructure_tools.AdminCommander.AdminCommander.copy_complete">copy_complete</a></code></li>
+<li><code><a title="datastructure_tools.AdminCommander.AdminCommander.copy_executer" href="#datastructure_tools.AdminCommander.AdminCommander.copy_executer">copy_executer</a></code></li>
+<li><code><a title="datastructure_tools.AdminCommander.AdminCommander.handle_copy_errors" href="#datastructure_tools.AdminCommander.AdminCommander.handle_copy_errors">handle_copy_errors</a></code></li>
+<li><code><a title="datastructure_tools.AdminCommander.AdminCommander.populateGUI" href="#datastructure_tools.AdminCommander.AdminCommander.populateGUI">populateGUI</a></code></li>
+<li><code><a title="datastructure_tools.AdminCommander.AdminCommander.saveAPIKEY" href="#datastructure_tools.AdminCommander.AdminCommander.saveAPIKEY">saveAPIKEY</a></code></li>
+<li><code><a title="datastructure_tools.AdminCommander.AdminCommander.saveConfigs" href="#datastructure_tools.AdminCommander.AdminCommander.saveConfigs">saveConfigs</a></code></li>
+<li><code><a title="datastructure_tools.AdminCommander.AdminCommander.saveServerSettings" href="#datastructure_tools.AdminCommander.AdminCommander.saveServerSettings">saveServerSettings</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>

@@ -1,5 +1,9 @@
 # Tutorial how to use Markdown and Githubpages
 Welcome to short tutorial of how to create Markdown-based documents.
+
+> Documentation is like sex: when it is good, it is very, very good;
+and when it is bad, it is better than nothing. 
+
 ## Formatting Guide:
 
 # <- Title
