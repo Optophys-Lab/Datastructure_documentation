@@ -4,7 +4,7 @@ To be continued
 
 Author: Florian
 
-![WeightCommander.png](..%2Fimages%2FWeightCommander.png)
+![WeightCommander.png](../images/WeightCommander.png)
 
 1. [Choose Entry type](#choose-entry-type)
 2. [Choose User](#choose-user)

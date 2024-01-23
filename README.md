@@ -14,5 +14,7 @@ Here comes some code.
 Wiki, tutorials, etc.
 
 Index <- needs autocreation?
+
 ## Gui Documentation
+
 [WeightCommander](gui_documentation%2FWeightCommander.md)
