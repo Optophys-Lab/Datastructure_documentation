@@ -7,20 +7,31 @@ This documentation is meant for internal use.
 Want to contribute to this amazing document ? please read the [guide](DocumentationTutorial.md).
 
 
-~~~~~~~~
-Here comes some code.
-~~~~~~~~
+
 
 Wiki, tutorials, etc.
 
 Index <- needs autocreation?
 
 ## Gui Documentation
-[AdminCommander](gui_documentation/AdminCommander.md)
-[WeightCommander](gui_documentation/WeightCommander.md)
+[Introduction to datastructure_tools](gui_documentation/general.md)
+
+How-to of individual tools:
+- [AdminCommander](gui_documentation/AdminCommander.md)
+- [FileCommander](gui_documentation/FileCommander.md)
+- [SessionCommander](gui_documentation/SessionCommander.md)
+- [SurgeryCommander](gui_documentation/SurgeryCommander.md)
+- [SurgeryPlanner](gui_documentation/SurgeryPlanner.md)
+- [WeightCommander](gui_documentation/WeightCommander.md)
 
 ## eLabFTW Documentation
-[Generate Apikey](eLabFTW_documentation/generate_apikey.md)
+[Introduction to eLabFTW lab notebook](eLabFTW_documentation/general_elabftw.md)
+
+Individual how-to:
+- [Register or Login](eLabFTW_documentation/register_login.md)
+- [Generate Apikey](eLabFTW_documentation/generate_apikey.md)
+- [Tools for administration](eLabFTW_documentation/administration_tools.md)
+
 
 ## Code Documentation
 [Code](code_documentation/code_index.md)

@@ -86,3 +86,8 @@ This allows you to choose if the given date was a start of water deprivation, en
 
 ## Store data
 pressing this button will store the inserted data to the database. Careful, removing it is not possible in the current weight commander.
+
+~~~~
+written by: Florian
+last modified: 2024-01-22
+~~~~

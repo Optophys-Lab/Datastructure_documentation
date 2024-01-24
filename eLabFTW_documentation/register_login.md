@@ -14,5 +14,11 @@ you get forwarded to myLogin
 3. Select out team. You account now needs to be verified by an [Admin](administration_tools.md#confirm-users) before use. 
 ![elabFTW_registration_team.png](../images/elabFTW_registration_team.png)
 
-After the verification you can access the eLabFTW from any computer, phone etc. 
+After the verification you can access the eLabFTW from any computer, phone etc.
+
+
+~~~~
+written by: Artur
+last modified: 2024-01-24
+~~~~
 

@@ -10,3 +10,9 @@ Our eLabFTW instance is served by IMBI and is running securely in Freiburg.
 [generate apikey](generate_apikey.md)
 
 [administration tools](administration_tools.md)
+
+
+~~~~
+written by: 
+last modified: 2024-01-24
+~~~~

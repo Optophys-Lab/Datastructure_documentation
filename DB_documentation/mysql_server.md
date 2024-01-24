@@ -28,3 +28,9 @@ To delete part-tables or other tables which fail due to Foreigh-key check one ca
 SET FOREIGN_KEY_CHECKS=0; -- to disable them
 SET FOREIGN_KEY_CHECKS=1; -- to re-enable them
 ~~~~~~~~
+
+
+~~~~
+written by: artur 
+last modified: 2024-01-24
+~~~~

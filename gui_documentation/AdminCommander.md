@@ -57,7 +57,7 @@ Refer to general [datastructure](../datastructure_documentation/datastructure.md
 
 ## Building Blocks of datastructure
 Read [datastructure](../datastructure_documentation/datastructure.md) first.
-Here we define file-structure for modalities of data- building blocks.
+Here we define file-structure for modalities of data-building blocks.
 Existing buildingblock should be reused if they fit to you data modality.
 
 ![admincommander_bblocks.png](../images/admincommander_bblocks.png)
@@ -70,17 +70,35 @@ folder, please check modify and enter names (processed can be blank, then no pro
 5. Press add
 
 ## Experimental types
-Aka combination of blocks
+Aka combination of blocks. Here we combine different block for different types of experiments.
+E.g you may do experiments with only ephys or with ephys+behavior.
 ![admincommander_exptypes.png](../images/admincommander_exptypes.png)
+1. Existing Experimental types and corresponding building blocks
+2. enter a new xperimental type with short desc
+3. choose a building block to add. [Add new](#building-blocks-of-datastructure)
+4. list of temporarily added blocks
+5. Press clear to remove all and restart entering
+6. If you are happy with you blocks Press Add
 
 ## Enter API-key for eLabFTW
 To be able to automatically push elements from DB to eLabFTW you will need an API-key which will be used to login 
 through the API. [Get your API-key](../eLabFTW_documentation/generate_apikey.md) 
 
-Enter the key in the Admincommander
 ![admincommander_apikey.png](../images/admincommander_apikey.png)
+1. Enter the key in the Admincommander
+2. Save
+
 After saving the key, the programm will try to connect and thus verify the key. If everything worked as expected
 the key will be stored in 
 
 ## Copy brain atlases
+Here you can copy the brain atlas files to your local folder inside the datastructure_tools. This will allow to use them
+in [SurgeryPlanner](SurgeryPlanner.md) and [SurgeryCommander](SurgeryCommander.md).
 ![admincommander_atlases.png](../images/admincommander_atlases.png)
+1. Choose an atlas to copy
+2. Press button
+
+~~~~
+written by: Artur
+last modified: 2024-01-24
+~~~~
