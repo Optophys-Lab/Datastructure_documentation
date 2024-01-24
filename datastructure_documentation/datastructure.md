@@ -1,0 +1,3 @@
+# Data Structure
+Description of rules hwo data should be organized on the dataserver.
+TOBE written...

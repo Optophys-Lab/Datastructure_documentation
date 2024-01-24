@@ -21,3 +21,6 @@ Index <- needs autocreation?
 
 ## eLabFTW Documentation
 [Generate Apikey](eLabFTW_documentation/generate_apikey.md)
+
+## Code Documentation
+[Code](code_documentation/code_index.md)
