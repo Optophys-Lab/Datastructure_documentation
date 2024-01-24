@@ -18,11 +18,15 @@ Index <- needs autocreation?
 
 How-to of individual tools:
 - [AdminCommander](gui_documentation/AdminCommander.md)
+- [AnimalCommander](gui_documentation/AnimalCommander.md)
+- [EquipmentCommander](gui_documentation/EquipmentCommander.md)
 - [FileCommander](gui_documentation/FileCommander.md)
 - [SessionCommander](gui_documentation/SessionCommander.md)
 - [SurgeryCommander](gui_documentation/SurgeryCommander.md)
 - [SurgeryPlanner](gui_documentation/SurgeryPlanner.md)
+- [VirusCommander](gui_documentation/VirusCommander.md)
 - [WeightCommander](gui_documentation/WeightCommander.md)
+
 
 ## eLabFTW Documentation
 [Introduction to eLabFTW lab notebook](eLabFTW_documentation/general_elabftw.md)

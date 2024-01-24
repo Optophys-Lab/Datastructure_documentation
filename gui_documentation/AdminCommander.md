@@ -2,8 +2,7 @@
 GUI for managing server connection as well as user settings. Projects, Experiments and datatypes can be created here, 
 as well as atlas files copied to local fodlers for fast access. eLabFTW API key can be entered here.
 
-[code here](../code_documentation/AdminCommander.html)
-
+[code here](../code_documentation/pdoc_datastructure_tools/datastructure_tools/AdminCommander.html)
 ## DB configuration
 Here we enter the information for connection to DB. This needs to be done once after installation.
 If you install datastructure_tools in a different env or different computer you will need to enter this again.

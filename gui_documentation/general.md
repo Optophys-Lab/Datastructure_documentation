@@ -8,8 +8,20 @@ You would like to start ?
 - [(Optionally) copy atlas files](AdminCommander.md#copy-brain-atlases)
 - Happy Science !
 
+### Want more How-to's ?
+- [AdminCommander](AdminCommander.md)
+- [AnimalCommander](AnimalCommander.md)
+- [EquipmentCommander](EquipmentCommander.md)
+- [FileCommander](FileCommander.md)
+- [SessionCommander](SessionCommander.md)
+- [SurgeryCommander](SurgeryCommander.md)
+- [SurgeryPlanner](SurgeryPlanner.md)
+- [VirusCommander](VirusCommander.md)
+- [WeightCommander](WeightCommander.md)
+
+
 ~~~~
 written by: Artur
-last modified: 2024-01-24
+last modified: 2024-01-25
 ~~~~
 
