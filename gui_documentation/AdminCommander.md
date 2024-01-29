@@ -1,6 +1,6 @@
 # AdminCommander
 GUI for managing server connection as well as user settings. Projects, Experiments and datatypes can be created here, 
-as well as atlas files copied to local fodlers for fast access. eLabFTW API key can be entered here.
+as well as atlas files copied to local folders for fast access. eLabFTW API key can be entered here.
 
 [code here](../code_documentation/pdoc_datastructure_tools/datastructure_tools/AdminCommander.html)
 ## DB configuration
@@ -37,6 +37,7 @@ in 6. you can choose what modality of chosen ExpType you want to save
 
 ## Adding Users
 Here you can register new users of the database. IMPORTANT! those are not user which connect to the [DB](#db-configuration)
+
 ![admincommander_users.png](../images/admincommander_users.png)
 1. List of users already added to DB
 2. Entry field for new users. Please use your RZ-id e.g. aa1000
@@ -46,6 +47,7 @@ Here you can register new users of the database. IMPORTANT! those are not user w
 Here you can register new Projects to the database. IMPORTANT! only those projects can be registered 
 which are in top-tree of archive/project. If you need new one and dont have a folder yet. Ask administration to create one.
 Refer to general [datastructure](../datastructure_documentation/datastructure.md)
+
 ![admincommander_projects.png](../images/admincommander_projects.png)
 1. List of projects already added to DB
 2. Dropdown with folder at top-level of archive/project
@@ -71,6 +73,7 @@ folder, please check modify and enter names (processed can be blank, then no pro
 ## Experimental types
 Aka combination of blocks. Here we combine different block for different types of experiments.
 E.g you may do experiments with only ephys or with ephys+behavior.
+
 ![admincommander_exptypes.png](../images/admincommander_exptypes.png)
 1. Existing Experimental types and corresponding building blocks
 2. enter a new xperimental type with short desc
@@ -93,6 +96,7 @@ the key will be stored in
 ## Copy brain atlases
 Here you can copy the brain atlas files to your local folder inside the datastructure_tools. This will allow to use them
 in [SurgeryPlanner](SurgeryPlanner.md) and [SurgeryCommander](SurgeryCommander.md).
+
 ![admincommander_atlases.png](../images/admincommander_atlases.png)
 1. Choose an atlas to copy
 2. Press button
