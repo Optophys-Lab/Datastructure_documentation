@@ -1,5 +1,6 @@
 # AnimalCommander
 GUI for managing animals. New animals can be added to DB and animals can be marked as perfused/dead.
+Entering a new animal here will automatically push it also to eLabFTW.
 
 [code here](../code_documentation/pdoc_datastructure_tools/datastructure_tools/AnimalCommander.html)
 
@@ -31,5 +32,5 @@ are not removed from the DB, but rather a new entry is made indication the anima
 
 ~~~~
 written by: Artur
-last modified: 2024-01-29
+last modified: 2024-01-30
 ~~~~

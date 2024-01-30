@@ -3,7 +3,7 @@ Tool for entering new viruses, batches of viruses, opsins, promotors etc. into t
 Having the viruses in the  database and associated with animals via surgey will allow easy search what was done with any
 given virus and with what results.
 
-Entering a virus or virus batch here will automatically push it also to eLabFTW (to be implemented)
+Entering a virus or virus batch here will automatically push it also to eLabFTW.
 
 ## Add a new virus to DB
 A new virus can be added and connected to its properties such as promots, opsin etc.
