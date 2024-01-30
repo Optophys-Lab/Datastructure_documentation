@@ -13,6 +13,7 @@ You would like to start ?
 - [AnimalCommander](AnimalCommander.md)
 - [EquipmentCommander](EquipmentCommander.md)
 - [FileCommander](FileCommander.md)
+- [LabbookCommander](LabbookCommander.md)
 - [SessionCommander](SessionCommander.md)
 - [SurgeryCommander](SurgeryCommander.md)
 - [SurgeryPlanner](SurgeryPlanner.md)

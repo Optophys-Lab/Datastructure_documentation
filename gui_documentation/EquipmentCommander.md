@@ -10,7 +10,7 @@ The type you want doesnt exist ? create a new one:
 ## Add new Probe Type
 One can create new electrode-type by entering the corresponding values for the electrode arrangengment and nr of shafts 
 etc. One can also upload a ProbeInterface file, a library which allows definition of probe geometries and visualization.
-The Library also enables using th eprobe geometries in the spikesorting.
+The Library also enables using the probe geometries in the spikesorting.
 
 ![equipmentcommander_probetype.png](../images/equipmentcommander_probetype.png)
 ## Add new miniscope
