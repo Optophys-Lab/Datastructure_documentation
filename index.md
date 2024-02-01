@@ -28,6 +28,12 @@ Individual how-to:
 - [Generate Apikey](eLabFTW_documentation/generate_apikey.md)
 - [Tools for administration](eLabFTW_documentation/administration_tools.md)
 
+## How-to fuer alle Lebenslagen
+- [Create an animal](combinatory_howto/animalcreation.md)
+- [Create a virus](combinatory_howto/viruscreation.md)
+- [Perfusion](combinatory_howto/animalperfusion.md)
+- [Surgery](combinatory_howto/surgery_entry.md)
+
 
 ## Code Documentation
 [Code](code_documentation/code_index.md)
