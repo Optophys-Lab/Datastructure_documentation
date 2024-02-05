@@ -13,10 +13,10 @@ parts:
       - file: combinatory_howto/behavioral_experiment.md
       - file: combinatory_howto/water_deprivation.md
       - file: gui_documentation/github.md
-
   - caption: Datastructure_tools GUI documentation
     chapters:
       - file: gui_documentation/general.md
+      - file: gui_documentation/installation.md
       - file: gui_documentation/AdminCommander.md
       - file: gui_documentation/AnimalCommander.md
       - file: gui_documentation/EquipmentCommander.md
@@ -26,13 +26,19 @@ parts:
       - file: gui_documentation/SurgeryPlanner.md
       - file: gui_documentation/VirusCommander.md
       - file: gui_documentation/WeightCommander.md
-
   - caption: eLabFTW Documentation
     chapters:
-      - file: LabFTW_documentation/general_elabftw.md
+      - file: eLabFTW_documentation/general_elabftw.md
       - file: eLabFTW_documentation/register_login.md
       - file: eLabFTW_documentation/generate_apikey.md
       - file: eLabFTW_documentation/administration_tools.md
+      - file: eLabFTW_documentation/experiment_behavior.md
+      - file: eLabFTW_documentation/experiment_perfusion.md
+      - file: eLabFTW_documentation/experiment_surgery.md
+      - file: eLabFTW_documentation/experiment_waterdep.md
+      - file: eLabFTW_documentation/resource_animal.md
+      - file: eLabFTW_documentation/resource_virus.md
+      - file: eLabFTW_documentation/crawler.md
   - caption: Code documentation
     chapters:
       - file: code_documentation/code_index.md
