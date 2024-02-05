@@ -1,0 +1,24 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: index
+parts:
+  - caption: How-to fuer alle Lebenslagen
+    chapters:
+      - file: combinatory_howto/animalcreation.md
+      - file: combinatory_howto/viruscreation.md
+      - file: combinatory_howto/animalperfusion.md
+      - file: combinatory_howto/surgery_entry.md
+      - file: combinatory_howto/behavioral_experiment.md
+      - file: combinatory_howto/water_deprivation.md
+      - file: gui_documentation/github.md
+  - caption: eLabFTW Documentation
+    chapters:
+      - file: LabFTW_documentation/general_elabftw.md
+      - file: eLabFTW_documentation/register_login.md
+      - file: eLabFTW_documentation/generate_apikey.md
+      - file: eLabFTW_documentation/administration_tools.md
+  - caption: Code documentation
+    chapters:
+      - file: code_documentation/code_index.md
