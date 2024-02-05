@@ -1,4 +1,7 @@
 # Tutorial how to use Markdown and Githubpages
+> Documentation is like sex: when it is good, it is very, very good;
+and when it is bad, it is better than nothing. 
+
 This page is currently being hosted via github pages. The html is build using [jupyter-book](https://jupyterbook.org).
 
 ~~~~~~~~
@@ -17,12 +20,9 @@ You can try to build locally using jupyter-book from inside the repository:
 jupyter-book build ./
 ~~~~~~~~
 
-Welcome to short tutorial of how to create Markdown-based documents.
 
-> Documentation is like sex: when it is good, it is very, very good;
-and when it is bad, it is better than nothing. 
 
-## Formatting Guide for MD files
+## Formatting Guide for markdown(MD) files
 see also <https://jupyterbook.org/en/stable/customize/config.html>
 
 # <- Title
@@ -31,6 +31,13 @@ see also <https://jupyterbook.org/en/stable/customize/config.html>
 #### <- heading 2.. You get the idea...
 
 **bold text** / _cursive_ / ~~strikedtrough~~ / 
+
+## Lists
+
+- item1
+- item2
+  - subitem1
+    - subsubitem1
 
 ## Code
 `
@@ -41,6 +48,12 @@ python -m "print('Hello World')"
 
 ~~~~~~~~
 Here comes some code.
+~~~~~~~~
+using language specific highlighting
+~~~~~~~~{python}
+import time
+time.sleep(int(5))
+print(sleep.__dict__)
 ~~~~~~~~
 
 
