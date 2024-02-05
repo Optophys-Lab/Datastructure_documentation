@@ -1,5 +1,5 @@
 # Welcome to Datastructure Tools
-We have compiled a great set of tools to enable us to work more effiecently and reproducible.
+We have compiled a great set of tools to enable us to work more efficiently and reproducible.
 
 You would like to start ?
 - Please read [datastructure](../datastructure_documentation/datastructure.md)

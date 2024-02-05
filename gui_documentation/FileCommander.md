@@ -14,6 +14,7 @@ be set in [AdminCommander](AdminCommander.md#user-specific-config). You can also
 5. List of files to be added for this modality and this session
 6. List of files for all session in current Queu
 7. Press add to add currently selected files (from 5) to the to copy Q
+The idea here is that you can select files for multiple sessions at once and then run a batch copy job. For example at the end of each day.
 8. To remove all files from Queu and current selection for this session
 9. For all session
 10. This executes the file copying. May take a while, the program may appear to hang. Dont close.
@@ -21,7 +22,10 @@ be set in [AdminCommander](AdminCommander.md#user-specific-config). You can also
 
 *. Indicates different building block of the exp template of this experiment there may be more or less of those.
 
+You record different data modalities on different computers ? No problem, FileCommander can be used in a distributed manner.
+Install [datastructure_tools](../gui_documentation/installation.md) on each computer and just select the correct session and copy the individual files for each modality.
+
 ~~~~
 written by: Artur
-last modified: 2024-01-30
+last modified: 2024-02-02
 ~~~~
