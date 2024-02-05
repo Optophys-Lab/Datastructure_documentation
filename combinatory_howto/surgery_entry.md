@@ -7,7 +7,7 @@ Requirements:
 - virus or probe are already in DB
 - you read the angle definition #TODO reference angle definition
 
-
+Your options:
 1. Use [Surgery](../gui_documentation/SurgeryCommander.md) THIS is the preferred way! 
 2. Entry using the [Surgery-experiment](../eLabFTW_documentation/resource_virus.md). Not all functionality is available here.
 3. Use hardcore python to entry to DB.Virus TODO reference jupyter tutorials

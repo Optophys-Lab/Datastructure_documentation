@@ -60,6 +60,8 @@ if any as well as the files on the dataserver will remain untouched.
 No worries, the session_id can be modified, as well as the corresponding filestructure on the data
 server.
 
+TODO link or describe the util function to rename a session to a different animal.
+
 
 ~~~~
 written by: Artur

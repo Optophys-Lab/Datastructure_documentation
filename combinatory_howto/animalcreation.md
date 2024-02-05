@@ -8,6 +8,7 @@ Requirements:
 - Animal type is already in DB
 - You know the TVA, genotype/strain, delivery date, age at delivery, sex, number, and the source of the animal
 
+Your options:
 1. Use [AnimalCommander](../gui_documentation/AnimalCommander.md) 
 2. Entry using the [Animal-resource](../eLabFTW_documentation/resource_animal.md) 
 3. Use hardcore python to entry to DB.Animal TODO reference jupyter tutorials

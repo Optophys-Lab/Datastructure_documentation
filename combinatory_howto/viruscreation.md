@@ -6,7 +6,7 @@ Requirements:
 - you have checked that this virus was not already added to db using a similar name
 - you know the titer, delivery date, supplier, opsin, reporter gene, expression promotor, etc.
 
-
+Your options:
 1. Use [VirusCommander](../gui_documentation/VirusCommander.md) THIS is the preferred way! 
 2. Entry using the [Virus-resource](../eLabFTW_documentation/resource_virus.md). Not all functionality is available here.
 3. Use hardcore python to entry to DB.Virus TODO reference jupyter tutorials

@@ -6,6 +6,7 @@ Requirements:
 - animal already exist in the DB
 - not marked as dead yet
 
+Your options:
 1. Use [WeightCommander](../gui_documentation/WeightCommander.md) THIS IS NOT IMPLEMENTED YET !!
 2. Entry using the [Perfusion-experiment](../eLabFTW_documentation/experiment_perfusion.md) 
 3. Use hardcore python to entry to DB.AnimalDeath TODO reference jupyter tutorials
