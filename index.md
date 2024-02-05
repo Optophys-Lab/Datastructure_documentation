@@ -32,12 +32,20 @@ How-to of individual tools:
 ## eLabFTW Documentation
 [Introduction to eLabFTW lab notebook](eLabFTW_documentation/general_elabftw.md)
 
-Individual how-to:
+General how-to:
 - [Register or Login](eLabFTW_documentation/register_login.md)
 - [Generate Apikey](eLabFTW_documentation/generate_apikey.md)
 - [Tools for administration](eLabFTW_documentation/administration_tools.md)
 
-
+Guides for individual templates:
+- [Behavior Exp Entry](eLabFTW_documentation/experiment_behavior.md)
+- [Perfusion Entry](eLabFTW_documentation/experiment_perfusion.md)
+- [Surgery Entry](eLabFTW_documentation/experiment_surgery.md)
+- [Waterdeprivation Entry](eLabFTW_documentation/experiment_waterdep.md)
+- [Animal Template](eLabFTW_documentation/resource_animal.md)
+- [Virus Template](eLabFTW_documentation/resource_virus.md)
 
 ## Code Documentation
+>"Is my code fast? No. But is it well documented? No. But does it work? Also no."
+
 [Code](code_documentation/code_index.md)

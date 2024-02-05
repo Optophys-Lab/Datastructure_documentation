@@ -5,16 +5,16 @@ Here we describe the fields of the resource template for animals.
 Remember you could also add viruses more conveniently with {ref}'VirusCommander')
 :::
 
-`````{admonition}
-:class: error
+:::{error}
 currently its not possible to enter a new batch of an existing viruse
-`````
+:::
 
-`````{admonition}
-:class: warning
+
+:::{warning}
 Please check that the virus you would like to enter is not already added! If you are addinga new batch of an exisiting 
 virus, please ensure the correct name of the virus from previos batch for them to be linked correctly.
-`````
+:::
+
 ## Adding a new virus or batch
 ![add_virus_1.PNG](../images/add_virus_1.PNG)
 To create a new virus/batch entry please use the 'Virus' template under resources tab.
