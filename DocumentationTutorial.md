@@ -1,10 +1,29 @@
 # Tutorial how to use Markdown and Githubpages
+This page is currently being hosted via github pages. The html is build using [jupyter-book](https://jupyterbook.org).
+
+~~~~~~~~
+pip install -U jupyter-book
+~~~~~~~~
+
+This adds search and index functionality. Furthermore, it allows straightforward integration of jupyter notebooks.
+Currently the main branch only contains text and jupyter_book one additionally contains the required files for building the site.
+**_toc.yaml** defines the table of contents of the book and **_config.yaml** the configuration.
+**deploy.yaml** defines the workflow for github-actions to build and deploy the pages.
+
+To integrate new content from main, merge main into jupyter_book and add new files to **_toc.yaml**.
+You can try to build locally using jupyter-book from inside the repository:
+
+~~~~~~~~
+jupyter-book build ./
+~~~~~~~~
+
 Welcome to short tutorial of how to create Markdown-based documents.
 
 > Documentation is like sex: when it is good, it is very, very good;
 and when it is bad, it is better than nothing. 
 
-## Formatting Guide:
+## Formatting Guide for MD files
+see also <https://jupyterbook.org/en/stable/customize/config.html>
 
 # <- Title
 ## <- Subtitle
@@ -31,8 +50,7 @@ Here comes some code.
 [linkt to website](https://www.optophysiology.uni-freiburg.de/)
 
 ## adding image
-![test_image.png](images%2Ftest_image.png)
-
+![logo-optophysiology-light.svg](images/logo-optophysiology-light.svg)
 
 ## math
 
