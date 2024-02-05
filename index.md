@@ -5,7 +5,16 @@ This documentation is meant for internal use.
 
 Want to contribute to this amazing document ? please read the [guide](DocumentationTutorial.md).
 
-## Gui Documentation
+## How-to fuer alle Lebenslagen
+- [Create an animal](combinatory_howto/animalcreation.md)
+- [Create a virus](combinatory_howto/viruscreation.md)
+- [Perfusion](combinatory_howto/animalperfusion.md)
+- [Surgery](combinatory_howto/surgery_entry.md)
+- [Behavioral Experiment](combinatory_howto/behavioral_experiment.md)
+- [Water deprivation](combinatory_howto/water_deprivation.md)
+- [Using git and github for version control](gui_documentation/github.md)
+
+## GUI documentation for datastructure_tools
 [Introduction to datastructure_tools](gui_documentation/general.md)
 
 How-to of individual tools:
@@ -28,14 +37,7 @@ Individual how-to:
 - [Generate Apikey](eLabFTW_documentation/generate_apikey.md)
 - [Tools for administration](eLabFTW_documentation/administration_tools.md)
 
-## How-to fuer alle Lebenslagen
-- [Create an animal](combinatory_howto/animalcreation.md)
-- [Create a virus](combinatory_howto/viruscreation.md)
-- [Perfusion](combinatory_howto/animalperfusion.md)
-- [Surgery](combinatory_howto/surgery_entry.md)
-- [Behavioral Experiment](combinatory_howto/behavioral_experiment.md)
-- [Water deprivation](combinatory_howto/water_deprivation.md)
-- [Using git and github for version control](gui_documentation/github.md)
+
 
 ## Code Documentation
 [Code](code_documentation/code_index.md)
