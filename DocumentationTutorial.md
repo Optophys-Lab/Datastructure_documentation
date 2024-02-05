@@ -9,7 +9,7 @@ pip install -U jupyter-book
 ~~~~~~~~
 
 This adds search and index functionality. Furthermore, it allows straightforward integration of jupyter notebooks.
-Currently the main branch only contains text and jupyter_book one additionally contains the required files for building the site.
+Currently, the main branch only contains text and jupyter_book one additionally contains the required files for building the site.
 **_toc.yaml** defines the table of contents of the book and **_config.yaml** the configuration.
 **deploy.yaml** defines the workflow for github-actions to build and deploy the pages.
 
@@ -50,11 +50,11 @@ python -m "print('Hello World')"
 Here comes some code.
 ~~~~~~~~
 using language specific highlighting
-~~~~~~~~{python}
+```python
 import time
 time.sleep(int(5))
 print(sleep.__dict__)
-~~~~~~~~
+```
 
 
 ## Cross - referencing

@@ -5,10 +5,12 @@ Requirements:
 
 
 ## Case 0: You stay stubborn and do things your way.
-Be my guest. But, be aware this is very likely to bite you in the *** at some point later. 
+Be my guest. But, be aware this is very likely to bite you in the *** at some point later. Also, you are on your own for 
+animal sheets.
+
 
 ## Case 1: You dont want to read [datastructure](../datastructure_documentation/datastructure.md), but just want to add an entry to the animal sheet.
-Meta data about where your data is stored is then not recorded to DB.
+Metadata about where your data is stored is then not recorded to DB.
 
 Options:
 1. Use [WeightCommander](../gui_documentation/WeightCommander.md) and enter a behavior entry
@@ -22,17 +24,17 @@ Good on you.
 [SessionCommander](../gui_documentation/SessionCommander.md) will give your session an easily identifiable session_id.
 As discussed [previously](../datastructure_documentation/datastructure.md) its has the format **%Y%m%d_animalid_%H%M%S**. SessionCommander will also create the correct 
 folder-tree inside your project folder. This will help you organize and find your files.
-Session commander also pushes the weight and information about the training to the labbook. Furthermore, metadata of your session will be recorded
+Session commander also pushes the weight and information about the training/experiments to the labbook. Furthermore, metadata of your session will be recorded
 to the DataJoint DB, making it easy searchable and integratable into processing pipelines.
 
 ### Use FileCommander to organize and copy your files to the correct place on the data server.
-[FileCommander](../gui_documentation/FileCommander.md)
-You record different data modalities on different computers ? No problem, FileCommander can be used in a distributed manner.
+You record different data modalities on different computers ? No problem, [FileCommander](../gui_documentation/FileCommander.md)
+can be used in a distributed manner.
 Install [datastructure_tools](../gui_documentation/installation.md) on each computer and just select the correct session and copy the individual files for each modality.
-FileCommander 
+ 
 
 ## Case 3: you would like to automate the folder creation, file copy and documentation
-We have build the tools wt reuse in mind. The core functionality of SessionCommander etc. is available as separate modules.
+We have built the tools with reuse in mind. The core functionality of SessionCommander etc. is available as separate modules.
 Those can be integrated in your custom software, etc. This will allow you to automate the procession of the session
 information, ensure adherence to the structure, reduce your manual work and human error.
 The Session class can be import from DB.utils and used to create sessions in DB, folders on the server etc.
@@ -41,7 +43,7 @@ Please ask Florian or Artur for details and help in implementing this in your ro
 
 
 ## How-to delete/modify Sessions
-This usually should not be necessarily and is straight a bad practice. Also poorly executed experiments should be 
+This usually should not be necessarily and is straight up a bad practice. Also, poorly executed experiments should be 
 documented as such. Rather add some notes to the eLabFTW entry or DB. When using SessionCommander there will be
 no need to rename folder names or location.
 
