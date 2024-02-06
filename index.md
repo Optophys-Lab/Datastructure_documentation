@@ -42,6 +42,7 @@ Guides for individual templates:
 - [Perfusion Entry](eLabFTW_documentation/experiment_perfusion.md)
 - [Surgery Entry](eLabFTW_documentation/experiment_surgery.md)
 - [Waterdeprivation Entry](eLabFTW_documentation/experiment_waterdep.md)
+- [AnimalSheetEntry](eLabFTW_documentation/experiment_animalsheet.md)
 - [Animal Template](eLabFTW_documentation/resource_animal.md)
 - [Virus Template](eLabFTW_documentation/resource_virus.md)
 
