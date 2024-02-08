@@ -2,7 +2,7 @@
 Here we describe the fields of the experimental template for surgery.
 
 :::{note}
-The functionality of entry via the eLabFTW is very limited to unavailabilty of checks and processing of 
+The functionality of entry via the eLabFTW is very limited due to unavailability of checks and processing of 
 entered data. So consider using the [SurgeryCommander](../gui_documentation/SurgeryCommander.md).
 :::
 
