@@ -1,18 +1,18 @@
-# Resource: Animal
+# Resource: Virus
 Here we describe the fields of the resource template for animals.
 
 :::{note}
-Remember you could also add viruses more conveniently with {ref}'VirusCommander')
+Remember you could also add viruses more conveniently with [VirusCommander](../gui_documentation/VirusCommander.md)
 :::
 
 :::{error}
-currently its not possible to enter a new batch of an existing viruse
+currently its not possible to enter a new batch of an existing virus via eLabFTW.
 :::
 
 
 :::{warning}
 Please check that the virus you would like to enter is not already added! If you are addinga new batch of an exisiting 
-virus, please ensure the correct name of the virus from previos batch for them to be linked correctly.
+virus, please ensure the correct name of the virus from previous batch for them to be linked correctly.
 :::
 
 ## Adding a new virus or batch

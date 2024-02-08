@@ -1,4 +1,4 @@
-# Resources: Animals
+# Resource: Animals
 Here we describe the fields of the animal resource template.
 
 :::{note}

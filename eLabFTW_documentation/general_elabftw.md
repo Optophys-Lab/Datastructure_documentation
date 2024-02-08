@@ -14,6 +14,7 @@ Our eLabFTW instance is served by IMBI and is running securely in Freiburg.
 - [Perfusion Entry](experiment_perfusion.md)
 - [Surgery Entry](experiment_surgery.md)
 - [Waterdeprivation Entry](experiment_waterdep.md)
+- [AnimalSheetEntry](experiment_animalsheet.md)
 - [Animal Template](resource_animal.md)
 - [Virus Template](resource_virus.md)
 
