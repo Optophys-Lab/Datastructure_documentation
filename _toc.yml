@@ -32,6 +32,7 @@ parts:
       - file: eLabFTW_documentation/register_login.md
       - file: eLabFTW_documentation/generate_apikey.md
       - file: eLabFTW_documentation/administration_tools.md
+      - file: eLabFTW_documentation/experiment_animalsheet.md
       - file: eLabFTW_documentation/experiment_behavior.md
       - file: eLabFTW_documentation/experiment_perfusion.md
       - file: eLabFTW_documentation/experiment_surgery.md
