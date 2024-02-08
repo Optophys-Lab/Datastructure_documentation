@@ -1,0 +1,44 @@
+# Experiments: Waterdeprivation
+Here we describe the fields of the experimental template for waterdeprivation.
+This is a simplified template for AnimalSheetEntry. 
+
+
+:::{note}
+Remember you could also use [WeightCommander](../gui_documentation/WeightCommander.md) for more convenience.
+:::
+
+![add_watdep_1.PNG](../images/add_watdep_1.PNG)
+![add_watdep_2.PNG](../images/add_watdep_2.PNG)
+1. Any title is ok since it will be modified by the crawler. 
+2. Any potential further notes
+![add_watdep_3.PNG](../images/add_watdep_3.PNG)
+3. Choose animal, needs to be in DB, [if not](../combinatory_howto/animalcreation.md).
+4. Choose person performing WD, can be left blank then the current user is used.
+5. Date and time of WD. ZeitWasserRaus will be inferred from here.
+6. Weight in gramms
+7. Housing
+
+Now our new entry is in the list. To indicate that you finished entering the information about this entry, please lock
+the item. After the item awaits the [crawler](crawler.md).
+
+Crawler will check the entry for errors, if any it will leave a comment on the entry.
+If everything seems correct the Crawler will add the entry to the DB and modify the entry.
+- It will change the title to : **WaterDeprivation_animalid#datetime**
+- it will add **animal_id** and **TVA** to the tags of this entry for easy search
+- add a comment indication the successful sync to DB
+- will create an animalsheet entry. Please check it and sign it !
+- will link this entry to the animalsheet
+
+## AnimalSheet
+To fullfill the requirements from RP we need to sign every animal experiment.
+As we already entered all the required information we can autocreate the animalsheet.
+For this, please check the entered values and lock the item. After few minutes the Crawler
+will create an [AnimaSheetEntry](experiment_animalsheet.md)
+![add_surgery_5.PNG](../images/add_surgery_5.PNG)
+linked autocreated animalsheet entry.
+
+[Sign the Animalsheet](experiment_animalsheet.md#sign-entry)
+~~~~
+written by: Artur
+last modified: 2024-02-08
+~~~~

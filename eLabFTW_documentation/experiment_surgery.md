@@ -39,7 +39,7 @@ the item. After the item awaits the [crawler](crawler.md).
 Crawler will check the entry for errors, if any it will leave a comment on the entry.
 If everything seems correct the Crawler will add the entry to the DB and modify the entry.
 - It will change the title to : **Surgery#animal_id**
-- it will add **animal_id** nad **TVA** to the tags of this entry for easy search
+- it will add **animal_id** and **TVA** to the tags of this entry for easy search
 - add a comment indication the successful sync to DB
 - will create an animalsheet entry. Please check it and sign it !
 - will link this entry to the animalsheet
