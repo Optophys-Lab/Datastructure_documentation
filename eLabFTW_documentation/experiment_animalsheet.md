@@ -1,2 +1,51 @@
+# Experiments: AnimalSheetEntry
+Here we describe the fields of the experimental template for an animalsheetentry.
+This is to be used if other available templates do not fit your need, and you need to enter some additional information
+into the animal sheet. The crawler will transfer the information to the DB AnimalSheetEntry table, from where
+automated animalsheets will be created.
+
+
+:::{note} Note about auto-created entries
+:class: dropdown
+Entries of this type will also be autocreated if you use templates such as
+[waterdeprivation](experiment_waterdep.md), [behavior](experiment_behavior.md), [surgery](experiment_surgery.md), [perfusion](experiment_perfusion.md).
+For those you do not need to create manual entries.
+:::
+
+:::{note}
+Remember you could also use [WeightCommander](../gui_documentation/WeightCommander.md) for more convenience.
+:::
+
+![add_animalsheet_1.PNG](../images/add_animalsheet_1.PNG)
+![add_animalsheet_2.PNG](../images/add_animalsheet_2.PNG)
+1. Any title is ok since it will be modified by the crawler. 
+2. Any potential further notes
+
+![add_animalsheet_3.PNG](../images/add_animalsheet_3.PNG)
+3. Choose animal, needs to be in DB, [if not](../combinatory_howto/animalcreation.md).
+
+
+Now our new entry is in the list. To indicate that you finished entering the information about this entry, please lock
+the item. After the item awaits the [crawler](crawler.md).
+
+Crawler will check the entry for errors, if any it will leave a comment on the entry.
+If everything seems correct the Crawler will add the entry to the DB and modify the entry.
+todo CHECK WHAT CRALER WILL DO
+
 ## Sign entry
-timelock the item for a legally binding signature.
+To sign an animal sheet entry with a legally binding signature, we use a timestamping service.
+To this end the information in the entry is hashed and send to a server which adds temporal hash. This can be used to prove,
+that the documented existed in this form at that timepoint.
+
+:::{warning}
+There are no take backs. One cannot modify or delete a timestamped experiment. However, one can ammend the information in the entry
+and re-sign it. Sign entries only after checking those thoroughly.
+:::
+
+After signing the entry, on the next run of the crawler the corresponding entry will be marked as signed,
+with info by whom and a link to this entry in eLabFTW. [See AnimalSheets](resource_animal.md#animalsheets)
+
+~~~~
+written by: Artur
+last modified: 2024-02-08
+~~~~
