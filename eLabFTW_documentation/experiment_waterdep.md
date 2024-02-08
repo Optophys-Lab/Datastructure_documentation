@@ -33,7 +33,7 @@ If everything seems correct the Crawler will add the entry to the DB and modify 
 To fullfill the requirements from RP we need to sign every animal experiment.
 As we already entered all the required information we can autocreate the animalsheet.
 For this, please check the entered values and lock the item. After few minutes the Crawler
-will create an [AnimaSheetEntry](experiment_animalsheet.md)
+will create an [AnimalSheetEntry](experiment_animalsheet.md)
 ![add_surgery_5.PNG](../images/add_surgery_5.PNG)
 linked autocreated animalsheet entry.
 
