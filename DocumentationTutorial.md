@@ -13,16 +13,21 @@ Currently, the main branch only contains text and jupyter_book one additionally 
 **_toc.yaml** defines the table of contents of the book and **_config.yaml** the configuration.
 **deploy.yaml** defines the workflow for github-actions to build and deploy the pages.
 
-To integrate new content from main, merge main into jupyter_book and add new files to **_toc.yaml**.
+To integrate new content: push changes to man. Then merge main into jupyter_book and add new files to **_toc.yaml**.
+Once you push changes to jupyter-book branch github actions will be excuted and compile and host the website.
 You can try to build locally using jupyter-book from inside the repository:
 
 ~~~~~~~~
 jupyter-book build ./
 ~~~~~~~~
+open ./_html/index.html to view the locally build website.
+
 
 
 
 ## Formatting Guide for markdown(MD) files
+Markdown files are text documents which can be used across multiple plattforms.
+When using jupyter-book instructional text can be entered as md files or jupyter notebooks.
 see also <https://jupyterbook.org/en/stable/customize/config.html>
 
 # <- Title
@@ -56,6 +61,14 @@ time.sleep(int(5))
 print(sleep.__dict__)
 ```
 
+:::{warning}
+You have been warned
+:::
+
+:::{note}Click me !
+:class: dropdown
+Hidden message
+:::
 
 ## Cross - referencing
 [link to file](README.md)

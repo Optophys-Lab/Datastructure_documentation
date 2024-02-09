@@ -12,7 +12,6 @@ entered data. Folder on the server cannot be created using eLabFTW. So consider 
 1. Any title is ok since it will be modified by the crawler. 
 2. Any potential further notes. Session duration, program details, 
 any further notes you would write down in normal labbook
-
 ![add_beh_3.png](../images/add_beh_3.png)
 3. Choose animal, needs to be in DB, [if not](../combinatory_howto/animalcreation.md).
 4. Weight in grams.
@@ -30,7 +29,7 @@ any further notes you would write down in normal labbook
 
 Now our new entry is in the list. To indicate that you finished entering the information about this entry, please lock
 the item. After the item awaits the [crawler](crawler.md).
-![add_virus_5.PNG](../images/add_virus_5.PNG)
+![add_virus_4.PNG](../images/add_virus_5.PNG)
 
 Crawler will check the entry for errors, if any it will leave a comment on the entry.
 If everything seems correct the Crawler will add the entry to the DB and modify the entry.
