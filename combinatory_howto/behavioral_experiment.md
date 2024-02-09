@@ -1,7 +1,8 @@
 # How to record an animal experiment 
 
 Requirements:
-- animal is already in DB
+- animal is already in DB, [if not](animalcreation.md)
+- you are added as user to DB, [if not](../gui_documentation/AdminCommander.md#adding-users) 
 
 
 ## Case 0: You stay stubborn and do things your way.

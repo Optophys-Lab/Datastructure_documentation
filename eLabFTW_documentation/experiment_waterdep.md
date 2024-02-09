@@ -20,6 +20,7 @@ Remember you could also use [WeightCommander](../gui_documentation/WeightCommand
 
 Now our new entry is in the list. To indicate that you finished entering the information about this entry, please lock
 the item. After the item awaits the [crawler](crawler.md).
+![add_virus_4.PNG](../images/add_virus_5.PNG)
 
 Crawler will check the entry for errors, if any it will leave a comment on the entry.
 If everything seems correct the Crawler will add the entry to the DB and modify the entry.

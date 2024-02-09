@@ -20,7 +20,6 @@ Remember you could also use [WeightCommander](../gui_documentation/WeightCommand
 ![add_animalsheet_2.PNG](../images/add_animalsheet_2.PNG)
 1. Any title is ok since it will be modified by the crawler. 
 2. Any potential further notes
-
 ![add_animalsheet_3.PNG](../images/add_animalsheet_3.PNG)
 3. Choose animal, needs to be in DB, [if not](../combinatory_howto/animalcreation.md).
 4. Check-date and time

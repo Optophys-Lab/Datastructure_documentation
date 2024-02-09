@@ -18,7 +18,6 @@ Okay.. you still insist on entering it via eLabFTW ?
 2. Please you the main text fields to enter your coordinates and angles, as well as details about the injection,
 and implanted thingy. While those things will not be pushed to DB they still be documented in eLabFTW. 
 Even better, you link the used virus(es) using the link resource field (13).
-
 ![add_surgery_3.PNG](../images/add_surgery_3.PNG)
 3. Choose an animal. Not present ?[Create an Animal](../combinatory_howto/animalcreation.md)
 4. Surgery date
@@ -34,7 +33,7 @@ Even better, you link the used virus(es) using the link resource field (13).
 
 Now our new entry is in the list. To indicate that you finished entering the information about this entry, please lock
 the item. After the item awaits the [crawler](crawler.md).
-![add_virus_5.PNG](../images/add_virus_5.PNG)
+![add_virus_4.PNG](../images/add_virus_5.PNG)
 
 Crawler will check the entry for errors, if any it will leave a comment on the entry.
 If everything seems correct the Crawler will add the entry to the DB and modify the entry.
@@ -43,7 +42,7 @@ If everything seems correct the Crawler will add the entry to the DB and modify 
 - add a comment indication the successful sync to DB
 - will create an animalsheet entry. Please check it and sign it !
 - will link this entry to the animalsheet
-![add_surgery_4.PNG](../images/add_surgery_4.PNG)
+
 
 ## AnimalSheet
 To fullfill the requirements from RP we need to sign every animal experiment.
