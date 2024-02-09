@@ -8,6 +8,7 @@ Our eLabFTW instance is served by IMBI and is running securely in Freiburg.
 - [register and login](register_login.md)
 - [generate apikey](generate_apikey.md)
 - [administration tools](administration_tools.md)
+- [about templates](general_templates.md)
 
 ## Guides for individual templates
 - [Behavior Exp Entry](experiment_behavior.md)

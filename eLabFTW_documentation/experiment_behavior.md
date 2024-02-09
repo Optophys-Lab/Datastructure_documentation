@@ -8,16 +8,17 @@ entered data. Folder on the server cannot be created using eLabFTW. So consider 
 
 ![add_beh_1.png](../images/add_beh_1.png)
 ![add_beh_2.png](../images/add_beh_2.png)
+
 1. Any title is ok since it will be modified by the crawler. 
 2. Any potential further notes. Session duration, program details, 
 any further notes you would write down in normal labbook
+
 ![add_beh_3.png](../images/add_beh_3.png)
 3. Choose animal, needs to be in DB, [if not](../combinatory_howto/animalcreation.md).
 4. Weight in grams.
 5. Project dropdown. Projects from DB [TO add new ones](../gui_documentation/AdminCommander.md#adding-projects)
 6. Session date and time.
-7. Session_id if you have custum one, can be left blank then the crawler will create one for you in the format 
-%Y%m%d_animalid_%H%M%S
+7. Session_id if you have custum one, can be left blank then the crawler will create one for you in the format %Y%m%d_animalid_%H%M%S
 8. Path to session data on the data server (optional, but highly recommended)
 9. any notes about the session
 10. Responsible person
