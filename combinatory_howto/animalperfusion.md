@@ -3,7 +3,7 @@
 To add a perfusion to the DB for subsequent use there are 3 ways.
 
 Requirements:
-- animal already exist in the DB
+- animal already exist in the DB, [if not](animalcreation.md)
 - not marked as dead yet
 
 Your options:

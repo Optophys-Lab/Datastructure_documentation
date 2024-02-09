@@ -1,4 +1,4 @@
-# How to _add a new animal_
+# How to add a new animal
 
 To add a new animal to the DB for subsequent use there are 3 ways.
 
