@@ -1,4 +1,4 @@
-# How to _add a Surgery_
+# How to add a Surgery
 
 To add a new injection/ implantation
 

@@ -1,4 +1,4 @@
-# How to _add a perfusion of existing animal_
+# How to add a perfusion of an existing animal
 
 To add a perfusion to the DB for subsequent use there are 3 ways.
 
