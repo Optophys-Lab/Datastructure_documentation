@@ -4,6 +4,13 @@ This tool can be used to copy the data into correct file structure according to 
 - [Details about datastructure](../datastructure_documentation/datastructure.md)
 - [how to create BuildingBlocks and ExpTemplates](AdminCommander.md#building-blocks-of-datastructure)
 
+:::{note}Start
+From the datastructure_tools directory run
+~~~bash
+python ./FileCommander.py
+~~~
+:::
+
 ![filecommander.png](../images/filecommander.png)
 
 1. Select user. Is preselected according to the [saved settings](AdminCommander.md#user-specific-config)

@@ -1,8 +1,16 @@
-# AnimalCommander
+# EquipmentCommander
 
 GUI for adding Ephys probes with defined electrode configuration and Miniscopes(not implemented yet).
 One can create specified geometric arrangement of electrodes in the probe. This can later be used for spike sorting as 
 well as electrode/neuron localization.
+
+
+:::{note}Start
+From the datastructure_tools directory run
+~~~bash
+python ./EquipmentCommander.py
+~~~
+:::
 
 ## Add new Probe for existing types
 ![equipmentcommander_addprobe.png](../images/equipmentcommander_addprobe.png)

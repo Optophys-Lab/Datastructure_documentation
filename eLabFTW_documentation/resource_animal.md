@@ -2,7 +2,7 @@
 Here we describe the fields of the animal resource template.
 
 :::{note}
-Remember you could also add viruses more conveniently with AnimalCommander
+Remember you could also add viruses more conveniently with [AnimalCommander](../gui_documentation/AnimalCommander.md)
 :::
 
 ## Adding a new animal

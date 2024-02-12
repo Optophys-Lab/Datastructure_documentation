@@ -1,8 +1,11 @@
 # WeightCommander
-GUI-Doc
-To be continued
 
-Author: Florian
+:::{note}Start
+From the datastructure_tools directory run
+~~~bash
+python ./WeightCommander.py
+~~~
+:::
 
 ![WeightCommander.png](../images/WeightCommander.png)
 

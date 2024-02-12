@@ -4,9 +4,17 @@ as well as atlas files copied to local folders for fast access. eLabFTW API key 
 
 [code here](../code_documentation/pdoc_datastructure_tools/datastructure_tools/AdminCommander.html)
 
-:::{error} Path error
+:::{note}Start
+From the datastructure_tools directory run
+~~~bash
+python ./AdminCommander.py
+~~~
+:::
+
+:::{error}
 :class: dropdown
 ![admincommander_error_path.png](../images/admincommander_error_path.png)
+
 In case you get this error when starting the AdminCommander, this means the dataserver is not under default path.
 Please configure the path to the server via [5](#user-specific-config).
 :::

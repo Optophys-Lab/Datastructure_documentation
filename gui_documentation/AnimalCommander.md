@@ -4,6 +4,13 @@ Entering a new animal here will automatically push it also to eLabFTW.
 
 [code here](../code_documentation/pdoc_datastructure_tools/datastructure_tools/AnimalCommander.html)
 
+:::{note}Start
+From the datastructure_tools directory run
+~~~bash
+python ./AnimalCommander.py
+~~~
+:::
+
 ## Add new animal to DB 
 To add a new animal to DB using GUIs you will need: 4-digit animal number, animal type(strain for rats and genotype 
 for mice) as well as the TVA the animal rans at, and the source of the animal.
