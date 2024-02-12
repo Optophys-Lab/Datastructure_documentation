@@ -5,6 +5,20 @@ given virus and with what results.
 
 Entering a virus or virus batch here will automatically push it also to eLabFTW.
 
+:::{note}Start
+From the datastructure_tools directory run
+~~~bash
+python ./VirusCommander.py
+~~~
+:::
+:::{error}
+:class: dropdown
+![error_server.PNG](../images/error_server.PNG)
+
+In case you get this error, no connection can be established to MySQL. Ensure you entered correct credentials 
+first using [AdminCommander](AdminCommander.md#db-configuration).
+:::
+
 ## Add a new virus to DB
 A new virus can be added and connected to its properties such as promots, opsin etc.
 Option you need is not available? Add new one as indicated later.

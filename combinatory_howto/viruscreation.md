@@ -1,4 +1,4 @@
-# How to _add a new virus or virus-batch_
+# How to add a new virus or virus-batch
 
 To add a new virus or batch to the DB for subsequent use there are 3 ways.
 

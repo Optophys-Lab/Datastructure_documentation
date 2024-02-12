@@ -5,16 +5,25 @@ coordinates. A surgery can contain one or several individual steps such as injec
 The tool lets you input the coordinates you used during the surgery (AP/ML on the brain surface) and depth of insertion.
 Then using atlas data the tool can automatically calculate where the target is and associate a brain-area with it.
 
-:::{error} Atlas error
+:::{error}
 ![surgery_atlaserror.PNG](../images/surgery_atlaserror.PNG)
+
 In case you get this error, please copy the atlase files first using [AdminCommander](AdminCommander.md#copy-brain-atlases).
 :::
 
-:::{note} Start
+:::{note}Start
 From the datastructure_tools directory run
 ~~~bash
 python ./SurgeryCommander.py
 ~~~
+:::
+
+:::{error}
+:class: dropdown
+![error_server.PNG](../images/error_server.PNG)
+
+In case you get this error, no connection can be established to MySQL. Ensure you entered correct credentials 
+first using [AdminCommander](AdminCommander.md#db-configuration).
 :::
 
 ## Definition of insertion angles

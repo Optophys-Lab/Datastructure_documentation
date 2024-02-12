@@ -13,6 +13,12 @@ Available atlases:
 Atlas information can also be accessed from DB via DB.BrainAtlas and DB.BrainRegionAnnotation.BrainRegion 
 region delineations are available there.
 
+:::{note}Start
+From the datastructure_tools directory run
+~~~bash
+python ./SurgeryPlanner.py
+~~~
+:::
 
 
 todo pics

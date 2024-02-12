@@ -4,6 +4,20 @@ This tool can be used to copy the data into correct file structure according to 
 - [Details about datastructure](../datastructure_documentation/datastructure.md)
 - [how to create BuildingBlocks and ExpTemplates](AdminCommander.md#building-blocks-of-datastructure)
 
+:::{note}Start
+From the datastructure_tools directory run
+~~~bash
+python ./FileCommander.py
+~~~
+:::
+:::{error}
+:class: dropdown
+![error_server.PNG](../images/error_server.PNG)
+
+In case you get this error, no connection can be established to MySQL. Ensure you entered correct credentials 
+first using [AdminCommander](AdminCommander.md#db-configuration).
+:::
+
 ![filecommander.png](../images/filecommander.png)
 
 1. Select user. Is preselected according to the [saved settings](AdminCommander.md#user-specific-config)
