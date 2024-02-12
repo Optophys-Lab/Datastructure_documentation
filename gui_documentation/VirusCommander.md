@@ -11,6 +11,13 @@ From the datastructure_tools directory run
 python ./VirusCommander.py
 ~~~
 :::
+:::{error}
+:class: dropdown
+![error_server.PNG](../images/error_server.PNG)
+
+In case you get this error, no connection can be established to MySQL. Ensure you entered correct credentials 
+first using [AdminCommander](AdminCommander.md#db-configuration).
+:::
 
 ## Add a new virus to DB
 A new virus can be added and connected to its properties such as promots, opsin etc.

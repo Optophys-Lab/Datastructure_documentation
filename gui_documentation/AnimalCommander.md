@@ -10,6 +10,13 @@ From the datastructure_tools directory run
 python ./AnimalCommander.py
 ~~~
 :::
+:::{error}
+:class: dropdown
+![error_server.PNG](../images/error_server.PNG)
+
+In case you get this error, no connection can be established to MySQL. Ensure you entered correct credentials 
+first using [AdminCommander](AdminCommander.md#db-configuration).
+:::
 
 ## Add new animal to DB 
 To add a new animal to DB using GUIs you will need: 4-digit animal number, animal type(strain for rats and genotype 

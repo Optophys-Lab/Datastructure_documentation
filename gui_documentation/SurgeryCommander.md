@@ -18,6 +18,14 @@ python ./SurgeryCommander.py
 ~~~
 :::
 
+:::{error}
+:class: dropdown
+![error_server.PNG](../images/error_server.PNG)
+
+In case you get this error, no connection can be established to MySQL. Ensure you entered correct credentials 
+first using [AdminCommander](AdminCommander.md#db-configuration).
+:::
+
 ## Definition of insertion angles
 To have the same nomenclature for insertion coordinates and angles please use following convention:
 ![surgerycommander_angles.PNG](../images/surgerycommander_angles.PNG)

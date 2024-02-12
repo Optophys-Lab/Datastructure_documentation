@@ -11,6 +11,13 @@ From the datastructure_tools directory run
 python ./EquipmentCommander.py
 ~~~
 :::
+:::{error}
+:class: dropdown
+![error_server.PNG](../images/error_server.PNG)
+
+In case you get this error, no connection can be established to MySQL. Ensure you entered correct credentials 
+first using [AdminCommander](AdminCommander.md#db-configuration).
+:::
 
 ## Add new Probe for existing types
 ![equipmentcommander_addprobe.png](../images/equipmentcommander_addprobe.png)
