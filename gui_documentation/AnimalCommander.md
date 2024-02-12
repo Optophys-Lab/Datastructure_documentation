@@ -9,7 +9,7 @@ To add a new animal to DB using GUIs you will need: 4-digit animal number, anima
 for mice) as well as the TVA the animal rans at, and the source of the animal.
 ![animalcommander_create.png](../images/animalcommander_create.png)
 1. list of animal currently in DB
-2. Choose Owner (is automatically set to the [saved settings](AdminCommander.md#user-specific-config))
+2. Choose Owner (is automatically set to the [saved settings](AdminCommander.md#user-specific-config)), but can be changed
 3. Enter the 4-digit animal number
 4. Choose animal type. For Mice this contains the genotype information such as som_cre. For rats the strain SD or
 LongEvans. The animal type you need is not available ? Please talk to Florian or Artur to get it added.

@@ -1,7 +1,18 @@
-# Tutorial how to use Markdown and Githubpages
-> Documentation is like sex: when it is good, it is very, very good;
-and when it is bad, it is better than nothing. 
+# Documentation about documentation
 
+You found an error or typo ? 
+
+For small typos please used the edit button
+![add_issue.PNG](images/add_issue.PNG)
+![add_issue_2.PNG](images/add_issue_2.PNG)
+Then modify the corresponding document and commit changes. Those will not appear automatically at the website yet,
+only after the main branch is merged with pages.
+
+You found a bigger issue or are missing something important?
+Please create an issue on github:
+![add_issue_3.PNG](images/add_issue_3.PNG)
+
+## Githubpages and jupyter-book
 This page is currently being hosted via github pages. The html is build using [jupyter-book](https://jupyterbook.org).
 
 ~~~~~~~~

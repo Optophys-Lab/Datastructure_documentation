@@ -3,6 +3,14 @@ GUI for managing server connection as well as user settings. Projects, Experimen
 as well as atlas files copied to local folders for fast access. eLabFTW API key can be entered here.
 
 [code here](../code_documentation/pdoc_datastructure_tools/datastructure_tools/AdminCommander.html)
+
+:::{error} Path error
+:class: dropdown
+![admincommander_error_path.png](../images/admincommander_error_path.png)
+In case you get this error when starting the AdminCommander, this means the dataserver is not under default path.
+Please configure the path to the server via [5](#user-specific-config).
+:::
+
 ## DB configuration
 Here we enter the information for connection to DB. This needs to be done once after installation.
 If you install datastructure_tools in a different env or different computer you will need to enter this again.
@@ -14,6 +22,11 @@ If you install datastructure_tools in a different env or different computer you 
 _opto_db_test_ if you are just playing around. And _opto_db_ if you know what you are doing.
 4. Press Save. If you entered correct credentials you will get a message and now datastructure_tools now has a 
 connection to DB. Please restart DB.
+
+:::{note} Manual changes
+:class: dropdown
+This information can also be manually edited at datastructure_tools/DataJoint/server_config.json
+:::
 
 ## User-specific config
 Here you can enter settings which will improve user experience. Some choises you save here will be used in further GUIs,
@@ -34,6 +47,11 @@ in 6. you can choose what modality of chosen ExpType you want to save
 8. Clear will remove entered information about paths
 9. Will show the overview of paths for each modality after entry.
 10. Press to save user configs.
+
+:::{note} Manual changes
+:class: dropdown
+This information can also be manually edited at datastructure_tools/user_config.json
+:::
 
 ## Adding Users
 Here you can register new users of the database. IMPORTANT! those are not user which connect to the [DB](#db-configuration)
@@ -103,5 +121,5 @@ in [SurgeryPlanner](SurgeryPlanner.md) and [SurgeryCommander](SurgeryCommander.m
 
 ~~~~
 written by: Artur
-last modified: 2024-01-24
+last modified: 2024-02-12
 ~~~~
