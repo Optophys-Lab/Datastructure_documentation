@@ -1,5 +1,7 @@
 # LabbookCommander
-is not needed anymore.. maybe will be rewritten for signing entries..
+is not needed anymore as has been replaced by eLabFTW
+
+maybe will be rewritten for signing entries..
 
 ~~~~
 written by: 

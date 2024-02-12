@@ -3,6 +3,8 @@ For general How-to and user guides please visit <https://doc.elabftw.net/> and <
 
 Our eLabFTW instance is served by IMBI and is running securely in Freiburg.
 <https://eln.imbi.uni-freiburg.de/>
+ATM, for testing we are using our own instance at:
+<https://55a7f305-83a9-4c21-94c4-79fa16062930.fr.bw-cloud-instance.org/>
 
 ## Some general how-to-guides
 - [register and login](register_login.md)
