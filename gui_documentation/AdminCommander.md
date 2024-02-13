@@ -87,6 +87,17 @@ Read [datastructure](../datastructure_documentation/datastructure.md) first.
 Here we define file-structure for modalities of data-building blocks.
 Existing buildingblock should be reused if they fit to you data modality.
 
+Building Blocks are templates of default prestructure of experimental procedures.
+These procedures can be:
+- miniscope recordings
+- 2P in vivo
+- 2P in vitro calcium imaging
+- electrophysiology in vivo
+- behavioral recordings
+- patch clamp recordings
+- etc
+
+
 ![admincommander_bblocks.png](../images/admincommander_bblocks.png)
 1. Existing Blocks and corresponding folder names
 2. enter a new building block with short desc
@@ -99,6 +110,10 @@ folder, please check modify and enter names (processed can be blank, then no pro
 ## Experimental types
 Aka combination of blocks. Here we combine different block for different types of experiments.
 E.g you may do experiments with only ephys or with ephys+behavior.
+
+Example experimental profiles per user/type of experiment: 	
+- BriceExperiment1 [miniscope, behavior]
+- BriceExperiment2 [miniscope]
 
 ![admincommander_exptypes.png](../images/admincommander_exptypes.png)
 1. Existing Experimental types and corresponding building blocks
