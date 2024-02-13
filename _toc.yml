@@ -6,6 +6,7 @@ root: index
 parts:
   - caption: How-to fuer alle Lebenslagen
     chapters:
+      - file: datastructure_documentation/datastructure.md
       - file: combinatory_howto/animalcreation.md
       - file: combinatory_howto/viruscreation.md
       - file: combinatory_howto/animalperfusion.md
