@@ -64,6 +64,9 @@ This information can also be manually edited at datastructure_tools/user_config.
 ## Adding Users
 Here you can register new users of the database. IMPORTANT! those are not user which connect to the [DB](#db-configuration)
 
+:::{note} Important
+Please also send the user_id to one of the administrators of the eLabFTW, so the internal_id can be set correctly.
+:::
 ![admincommander_users.png](../images/admincommander_users.png)
 1. List of users already added to DB
 2. Entry field for new users. Please use your RZ-id e.g. aa1000
