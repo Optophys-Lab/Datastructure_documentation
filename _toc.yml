@@ -15,6 +15,7 @@ parts:
       - file: combinatory_howto/water_deprivation.md
       - file: combinatory_howto/animalsheetentry.md
       - file: gui_documentation/github.md
+      - file: DB_documentation/Tutorial.ipynb
   - caption: Datastructure_tools GUI documentation
     chapters:
       - file: gui_documentation/general.md
