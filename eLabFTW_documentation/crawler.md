@@ -70,7 +70,7 @@ The crawler is running a scheduler to run different jobs at different timepoints
   - user entered or if not take the creator as user
     - checks that user as orgid (RZ-kuerzel)
   - animal note is take from main text body
-- if no errors so far, tries to push to DB
+- if no errors so far, tries to push to DB, *DB.Animal*
 - if errors, comments on the entry
 - if push successful, changes title to animal_id
 - adds tva as a tag to the entry
@@ -83,7 +83,7 @@ The crawler is running a scheduler to run different jobs at different timepoints
 - load the meta fields
 - check:
   - delivery date is entered   
-- if no errors so far, tries to push to DB
+- if no errors so far, tries to push to DB *DB.Virus*
 - if errors, comments on the entry
 - if push successful, changes title to virus#batch_nr
 - adds tva as a tag to the entry
@@ -91,18 +91,59 @@ The crawler is running a scheduler to run different jobs at different timepoints
 - logs entry
 
 ### Crawling for behavioral entries
+**crawl4Sessions**
+- reads entries in eLabFTW (of resource category Behavior and locked!)
+- checks if entry was already crawled (DB entry)
+- loads the meta fields
+- creates a session_id
+- *DB.Session*
 
 ### Crawling for perfusions
+**crawl4Perfusions**
+- reads entries in eLabFTW (of resource category Perfusion and locked!)
+- checks if entry was already crawled (DB entry)
+- loads the meta fields
+- checks for animal_id
+- pushes to DB *DB.Animal.Death*
+- Creates animalsheet entry with some pre-filled fields:
+  - procedure: f"Euthanasia,{perfusion_d['drugs']} Perfusion"
+  - weiterleben: 'Toetung'
+        
 
 ### Crawling for water deprivations
+**crawl4Waterdeprivation**
+- read entries in eLabFTW (of resource category WaterDeprivation and locked!)
+- checks if entry was already crawled (DB entry)
+- loads the meta fields
+- pushes to DB: *DB.ZWR*
+- Creates animalsheet entry with some pre-filled fields:
+  -  procedure: f'Kontrolle und Beginn der Wasserdeprivation, ZWR:{ZWR}'
 
 ### Crawling for animal sheets
+**crawl4AnimalSheetEntries**
+- read entries in eLabFTW (of resource category AnimalDocumentation and locked!)
+- checks if entry was already crawled (DB entry)
+- loads the meta fields
+- pushes to DB *DB.AnimalSheetEntry*
 
 ### Crawling for surgeries
+**crawl4Surgeries**
 - read entries in eLabFTW (of resource category Surgery and locked!)
-
-
-
+- checks if entry was already crawled (DB entry)
+- load the meta fields
+- check:
+  - surgery date is entered 
+  - animal_nr is entered and is int
+  - age at delivery is a float
+  - user entered 
+- checks if entry is already inDB via animal_id and surgery datetime
+- pushed to DB *DB.Surgery*
+- logs idx as crawled
+- puts animal_id as tag
+- link animal to entry
+- puts tva as tag if avaible
+- creates an animalsheet entry in DB and eLabFTW (links to this entry) 
+ 
 ## Pushes
 At initialization the crawler can push current state of the DB to eLabFTW.
 The templates for individual entries are designed in a way that the fields have same names as in 
