@@ -35,15 +35,22 @@ conda create -n crawler python=3.9
 ~~~~
 - [proceed with datastructure_tools installation](../gui_documentation/installation.md)
 
+install de_DE.UTF8 locale as BW-Cloud does not have it by default
+~~~~
+sudo apt-get install language-pack-de
+sudo dpkg-reconfigure locales
+~~~~
 
 
 ## HighLevel explanation of how crawler works
 I will try to describe the implemented logic of the crawler. 
 ### Access to DataJoint
 Is done in the same way as for individual user. [See here.](../gui_documentation/AdminCommander.md)
-However, as no graphical interface is available the _server_settings.json_ needs to be modified via cmd editor such as nano.
+However, as no graphical interface is available the _server_settings.json_ and _user_settings.json_ need
+to be modified via cmd editor such as nano.
 ~~~~~
-nano server_settings.json
+nano ./datastructure_tools/DataJoint/server_settings.json
+nano ./datastructure_tools/user_settings.json
 
 ctrl+o to save
 ctrl+x to exit
