@@ -3,8 +3,8 @@ For general How-to and user guides please visit <https://doc.elabftw.net/> and <
 
 Our eLabFTW instance is served by IMBI and is running securely in Freiburg.
 <https://eln.imbi.uni-freiburg.de/>
-ATM, for testing we are using our own instance at:
-<https://55a7f305-83a9-4c21-94c4-79fa16062930.fr.bw-cloud-instance.org/>
+Please note that to use the eLabFTW functionality from the divers commanders you need to generate the API key 
+and save it using AdminCommander.
 
 ## Some general how-to-guides
 - [register and login](register_login.md)
@@ -32,5 +32,5 @@ Some entries entered via [datastructure_tools](../gui_documentation/general.md) 
 
 ~~~~
 written by: Artur
-last modified: 2024-02-05
+last modified: 2024-05-07
 ~~~~
