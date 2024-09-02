@@ -69,8 +69,8 @@ through the API. [Get your API-key](../eLabFTW_documentation/generate_apikey.md)
 1. Enter the key in the Admincommander
 2. Save
 
-After saving the key, the programm will try to connect and thus verify the key. If everything worked as expected
-the key will be stored in 
+After saving the key, the program will try to connect and thus verify the key. If everything worked as expected
+the key will be stored in *user_config.json*.
 
 ## Adding Users
 Here you can register new users of the database. IMPORTANT! those are not user which connect to the [DB](#db-configuration)
@@ -147,5 +147,5 @@ in [SurgeryPlanner](SurgeryPlanner.md) and [SurgeryCommander](SurgeryCommander.m
 
 ~~~~
 written by: Artur
-last modified: 2024-02-12
+last modified: 2024-09-02
 ~~~~
