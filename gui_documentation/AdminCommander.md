@@ -61,6 +61,17 @@ in 6. you can choose what modality of chosen ExpType you want to save
 This information can also be manually edited at datastructure_tools/user_config.json
 :::
 
+## Enter API-key for eLabFTW
+To be able to automatically push elements from DB to eLabFTW you will need an API-key which will be used to login 
+through the API. [Get your API-key](../eLabFTW_documentation/generate_apikey.md) 
+
+![admincommander_apikey.png](../images/admincommander_apikey.png)
+1. Enter the key in the Admincommander
+2. Save
+
+After saving the key, the program will try to connect and thus verify the key. If everything worked as expected
+the key will be stored in *user_config.json*.
+
 ## Adding Users
 Here you can register new users of the database. IMPORTANT! those are not user which connect to the [DB](#db-configuration)
 
@@ -126,17 +137,6 @@ Example experimental profiles per user/type of experiment:
 5. Press clear to remove all and restart entering
 6. If you are happy with you blocks Press Add
 
-## Enter API-key for eLabFTW
-To be able to automatically push elements from DB to eLabFTW you will need an API-key which will be used to login 
-through the API. [Get your API-key](../eLabFTW_documentation/generate_apikey.md) 
-
-![admincommander_apikey.png](../images/admincommander_apikey.png)
-1. Enter the key in the Admincommander
-2. Save
-
-After saving the key, the programm will try to connect and thus verify the key. If everything worked as expected
-the key will be stored in 
-
 ## Copy brain atlases
 Here you can copy the brain atlas files to your local folder inside the datastructure_tools. This will allow to use them
 in [SurgeryPlanner](SurgeryPlanner.md) and [SurgeryCommander](SurgeryCommander.md).
@@ -147,5 +147,5 @@ in [SurgeryPlanner](SurgeryPlanner.md) and [SurgeryCommander](SurgeryCommander.m
 
 ~~~~
 written by: Artur
-last modified: 2024-02-12
+last modified: 2024-09-02
 ~~~~

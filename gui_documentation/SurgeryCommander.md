@@ -26,6 +26,7 @@ In case you get this error, no connection can be established to MySQL. Ensure yo
 first using [AdminCommander](AdminCommander.md#db-configuration).
 :::
 
+
 ## Definition of insertion angles
 To have the same nomenclature for insertion coordinates and angles please use following convention:
 ![surgerycommander_angles.PNG](../images/surgerycommander_angles.PNG)
@@ -44,10 +45,10 @@ To have the same nomenclature for insertion coordinates and angles please use fo
 ![surgerycommander_1.PNG](../images/surgerycommander_1.PNG)
 1. Choose User (is automatically set to the [saved settings](AdminCommander.md#user-specific-config)), but can be changed
 2. Choose Animal 
-3. Add weight
+3. Add weight (Is mandatory now)
 4. Add procedure and anesthesia details
 5. Housing and Weiterleben
-6. Medication
+6. Medication (You can also use the *addDrugs* button to add default drugs)
 7. Notes about surgery (not for animal sheet)
 8. Surgery date
 9. Buttons for individual entries for Injcetions, Implantations, etc
@@ -56,6 +57,11 @@ To have the same nomenclature for insertion coordinates and angles please use fo
 12. To show selected entry in atlas-view (greyed out if no atlas available)
 13. Add surgery to DB and AnimalSheetEntry
 14. Clear all entries in case things were entered not correctly (only before pushing to DB)
+
+If you have entered the API-key for eLabFTW in the [AdminCommander](../gui_documentation/AdminCommander.md#enter-api-key-for-elabftw) 
+the information about the surgery such as what injections and where are pushed to eLabFTW.
+
+Also an AnimalSheet entry is created from the information entered.
 
 ### Injections
 To add injections push the corresponding [button](#general-surgery-entries).
@@ -69,6 +75,8 @@ To add injections push the corresponding [button](#general-surgery-entries).
 7. To show selected entry in atlas-view (greyed out if no atlas available).
 8. Clear all fields
 9. Add injections to list
+
+
 
 ## Fiber implantation
 To add injections push the corresponding [button](#general-surgery-entries).
@@ -84,9 +92,10 @@ To add injections push the corresponding [button](#general-surgery-entries).
 Follow the same structure, see above.
 
 
-#TODO if atlas is initialized.. try to upload the image(s) to the eLabFTW
-do i dump the brain area ? do i link the used viruses ?
+#TODO 
+- if atlas is initialized.. try to upload the image(s) to the eLabFTW
+- dump the brain area 
 ~~~~
 written by: Artur 
-last modified: 2024-02-12
+last modified: 2024-09-02
 ~~~~
