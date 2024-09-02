@@ -10,12 +10,12 @@ Its possible to perform all functions as in the browser via API.
 At the moment its planned that the crawler is running at a virtual BW-Cloud instance.
 to access the instance using shh
 
-    ssh -i test_schluesser.pem ubuntu@192.xx.42.xxx
+    ssh -i test_schluesser.pem ubuntu@10.20.xx.xx
 
 test_schluesser.pem and ip are to be acquired from save sources..
 
 ### Requirements for the instance:
-- ubuntu 22.04 
+- ubuntu 24.04 
 - inside university firewall
 - https and mysql ports open
 
@@ -55,6 +55,14 @@ nano ./datastructure_tools/user_settings.json
 ctrl+o to save
 ctrl+x to exit
 ~~~~~
+
+or one could copy local files via 
+
+~~~~
+scp -i crawler_keypair.pem  /path2/user_config.json ubuntu@10.20.xx.xx:~/DataStructure_tools/datastructure_tools/
+scp -i crawler_keypair.pem /path2/datastructure_tools/DataJoint/server_config.json ubuntu@10.20.xx.xx:~/DataStructure_tools/datastructure_tools/DataJoint/server_config.json 
+~~~~
+
 [Datastructure tools](..%2Fgui_documentation%2Finstallation.md) are installed and a conda environment.
 TODO, maybe move to docker container ?
 
