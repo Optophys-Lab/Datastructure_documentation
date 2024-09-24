@@ -6,4 +6,4 @@ Why? <https://coderefinery.github.io/reproducible-research/>
 
 [AdminCommander code](pdoc_datastructure_tools/datastructure_tools/AdminCommander.html)
 
-[index.html](pdoc_datastructure_tools/index.html)
+[index.md](index.md)
