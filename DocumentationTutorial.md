@@ -5,27 +5,28 @@ You found an error or typo ?
 For small typos please used the edit button
 ![add_issue.PNG](images/add_issue.PNG)
 ![add_issue_2.PNG](images/add_issue_2.PNG)
-Then modify the corresponding document and commit changes. Those will not appear automatically at the website yet,
-only after the main branch is merged with pages.
+Then modify the corresponding document and commit changes. Those will appear automatically on the website after it is build.
 
 You found a bigger issue or are missing something important?
-Please create an issue on github:
+Please create an issue on GitHub:
 ![add_issue_3.PNG](images/add_issue_3.PNG)
 
 ## Githubpages and jupyter-book
-This page is currently being hosted via github pages. The html is build using [jupyter-book](https://jupyterbook.org).
+This page is currently being hosted via GitHub pages. The html is build using [jupyter-book](https://jupyterbook.org).
 
 ~~~~~~~~
 pip install -U jupyter-book
 ~~~~~~~~
 
 This adds search and index functionality. Furthermore, it allows straightforward integration of jupyter notebooks.
-Currently, the main branch only contains text and jupyter_book one additionally contains the required files for building the site.
-**_toc.yaml** defines the table of contents of the book and **_config.yaml** the configuration.
-**deploy.yaml** defines the workflow for github-actions to build and deploy the pages.
 
-To integrate new content: push changes to man. Then merge main into jupyter_book and add new files to **_toc.yaml**.
-Once you push changes to jupyter-book branch github actions will be excuted and compile and host the website.
+The repository is structured as follows:
+- **_toc.yaml** defines the table of contents of the book 
+- **_config.yaml** the configuration.
+- **.github/workflows/deploy.yaml** defines the workflow for github-actions to build and deploy the pages.
+
+To integrate new content, add new files and add them to **_toc.yaml**,  push changes to main.  
+Once you push changes to main branch, github actions will be executed and compile and host the website.
 You can try to build locally using jupyter-book from inside the repository:
 
 ~~~~~~~~
@@ -37,7 +38,7 @@ open ./_html/index.html to view the locally build website.
 
 
 ## Formatting Guide for markdown(MD) files
-Markdown files are text documents which can be used across multiple plattforms.
+Markdown files are text documents which can be used across multiple platforms.
 When using jupyter-book instructional text can be entered as md files or jupyter notebooks.
 see also <https://jupyterbook.org/en/stable/customize/config.html>
 
