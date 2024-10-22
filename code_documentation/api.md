@@ -23,12 +23,11 @@ expName -> str experiment name folder
 experiment_template -> str experiment_type name will be checked
 
 probably new way to use it:
-
-  session = SessionClass(self.DB, animal_id=AnimalName2use, session_datetime=session_datetime,
-                            session_note=’This is a tutorial note’, project=’2020_testproject’,
-                            user=’tt1010’, expName=’totally_real_experiment’,
-                            experiment_template = ‘tutorial_experiment’, weight = ‘9999’, test = True)
-  session.pushWholeSessionInfo2DB()
+# session = SessionClass(self.DB, animal_id=AnimalName2use, session_datetime=session_datetime,
+#                            session_note=’This is a tutorial note’, project=’2020_testproject’,
+#                            user=’tt1010’, expName=’totally_real_experiment’,
+#                            experiment_template = ‘tutorial_experiment’, weight = ‘9999’, test = True)
+# session.pushWholeSessionInfo2DB()
 
 old way to use it how to use:
 # session = SessionClass(self.DB, animal_id=AnimalName2use, session_datetime=session_datetime,
