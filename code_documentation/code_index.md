@@ -4,6 +4,7 @@ Why? <https://coderefinery.github.io/reproducible-research/>
 
 ![research_comic_phd.gif](../images/research_comic_phd.gif)
 
-[AdminCommander code](pdoc_datastructure_tools/datastructure_tools/AdminCommander.html)
 
 [index.md](index.md)
+
+Descsripe how to document code using markdown and sphinx. 

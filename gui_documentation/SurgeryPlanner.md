@@ -20,10 +20,12 @@ python ./SurgeryPlanner.py
 ~~~
 :::
 
+:::{error}
+The Tool is very experimental atm. If anybody is interested in using it, please contact Artur. 
+:::
 
 todo pics
-
 ~~~~
-written by: 
-last modified: 2024-02-12
+written by: Artur
+last modified: 2024-10-22
 ~~~~

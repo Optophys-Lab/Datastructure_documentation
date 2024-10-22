@@ -41,7 +41,7 @@ are not removed from the DB, but rather a new entry is made indication the anima
 
 1. Choose the animal to be marked  as dead
 2. Choose a date
-3. enter a reason(only for internal, not pushed to animal sheet)
+3. enter a reason(only internal, not pushed to animal sheet)
 4. Press remove animal
 
 ~~~~

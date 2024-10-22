@@ -13,6 +13,7 @@ Want to contribute to this amazing document ? please read the [guide](Documentat
 - [Behavioral Experiment](combinatory_howto/behavioral_experiment.md)
 - [Water deprivation](combinatory_howto/water_deprivation.md)
 - [Create a general animalsheet entry](combinatory_howto/animalsheetentry.md)
+- [Add new TVA](combinatory_howto/tva.md)
 - [Using git and github for version control](gui_documentation/github.md)
 
 ## GUI documentation for datastructure_tools
