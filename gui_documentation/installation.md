@@ -37,9 +37,26 @@ or use Github Desktop or similar tools to keep the repository up-to-date.
     git pull
 
 
+::: {dropdown} troubleshooting
+If you cannot open any of the commanders due to PyQt6 Errors, try updating PyQt6 via
+    
+´´´bash
+pip uninstall pyqt6
+pip install pyqt6
+´´´
+or install pyqt6-tools
+´´´bash
+pip install pyqt6-tools
+´´´
+or install via conda
+´´´bash
+conda install pyqt
+´´´
+
+:::
 
 read user guides for GUI-tools [general.md](general.md)
 ~~~~
 written by: Artur
-last modified: 2024-09-20
+last modified: 2024-10-22
 ~~~~
