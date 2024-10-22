@@ -1,7 +1,8 @@
 # Using git and GitHub
 >"Git is a version control system that lets you track who made changes to what and when, and has options for updating a
 shared or public version of your code on source code repository hosting platforms such as GitHub or GitLab." Software Carpentry 
-Whole lecture series on how and why to use git:
+
+Whole lecture series on how and why to use git: HIGHLY advice to read
 <https://coderefinery.github.io/git-intro/>
 
 
