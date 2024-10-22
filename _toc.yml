@@ -14,7 +14,9 @@ parts:
       - file: combinatory_howto/behavioral_experiment.md
       - file: combinatory_howto/water_deprivation.md
       - file: combinatory_howto/animalsheetentry.md
+      - file: combinatory_howto/tva.md
       - file: gui_documentation/github.md
+      - file: DB_documentation/python.md
       - file: DB_documentation/Tutorial.ipynb
   - caption: Datastructure_tools GUI documentation
     chapters:

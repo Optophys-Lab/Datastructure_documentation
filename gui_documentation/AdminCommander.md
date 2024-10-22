@@ -93,6 +93,15 @@ Here you can add new projects to the database. IMPORTANT! only those projects ca
 that are in the top tree of the archive/project. If you need a new one and do not have a folder yet. Ask the administration to create one.
 Refer to general [datastructure](../datastructure_documentation/datastructure.md)
 
+### Conventions to name your project folder:
+As people started creating new project folders, we realized that we needed a clearer naming convention for them, and the sooner we implemented it the better (it will be a lot more work later than it is now).
+The idea of the organization was to distinguish between a project as an overarching name and different experiments within the project.
+To keep the folder organized, it would be great to name the project like this \<year>_\<descriptive name or grant>. Within these project folders you can keep different experiments.
+For example, a project could be 2014_ERC and an experiment within it could be Betaburst_reinforcement.
+Not ideal names would be 2024_Behavior, since many people do behavior and neither the goal nor the grant is obvious.
+Also problematic is something like 2023_ALM, as many people can work on that structure, and it is not directly understandable what the goal of that project is.
+Also, it would be ideal to keep the project folder sparse, i.e. only create multiple project folders if they are really distinct in the sense that they contain completely different experiments/have different goals.
+
 ![admincommander_projects.png](../images/admincommander_projects.png)
 1. List of projects already added to DB
 2. Dropdown with folder at top-level of archive/project
