@@ -23,28 +23,25 @@ expName -> str experiment name folder
 experiment_template -> str experiment_type name will be checked
 
 probably new way to use it:
-session = SessionClass(self.DB, animal_id=AnimalName2use, session_datetime=session_datetime,
-
-> session_note=’This is a tutorial note’, project=’2020_testproject’,
-> user=’tt1010’, expName=’totally_real_experiment’,
-> experiment_template = ‘tutorial_experiment’, weight = ‘9999’, test = True)
-
-session.pushWholeSessionInfo2DB()
+# session = SessionClass(self.DB, animal_id=AnimalName2use, session_datetime=session_datetime,
+#                            session_note=’This is a tutorial note’, project=’2020_testproject’,
+#                            user=’tt1010’, expName=’totally_real_experiment’,
+#                            experiment_template = ‘tutorial_experiment’, weight = ‘9999’, test = True)
+# session.pushWholeSessionInfo2DB()
 
 old way to use it how to use:
-session = SessionClass(self.DB, animal_id=AnimalName2use, session_datetime=session_datetime,
+# session = SessionClass(self.DB, animal_id=AnimalName2use, session_datetime=session_datetime,
+#                            session_note=self.Session_note.toPlainText(), project=self.Project_combo.currentText(),
+#                            user=self.User_combo.currentText(), expName=self.ExpName_combo.currentText(),
+#                            experiment_template = self.ExpType_combo.currentText(),test = BOOL if a test session)
 
-> session_note=self.Session_note.toPlainText(), project=self.Project_combo.currentText(),
-> user=self.User_combo.currentText(), expName=self.ExpName_combo.currentText(),
-> experiment_template = self.ExpType_combo.currentText(),test = BOOL if a test session)
-
-pathcreationSuccess = session.createSession_path() # create Paths on server
+#pathcreationSuccess = session.createSession_path() # create Paths on server
 # TRUE if worked
-PushSuccess = session.checkInputs() # checks inputs and pushes to DB
-% TRUE if worked
-session.weight = float(self.AnimalWeightEdit.text())
-session.weight_note = self.WeightNoteEdit.text()
-session.pushWeights()
+#PushSuccess = session.checkInputs() # checks inputs and pushes to DB
+# TRUE if worked
+#session.weight = float(self.AnimalWeightEdit.text())
+#session.weight_note = self.WeightNoteEdit.text()
+#session.pushWeights()
 
 #### pushWholeSessionInfo2DB(\*\*kwargs)
 

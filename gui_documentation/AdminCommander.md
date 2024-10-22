@@ -29,7 +29,7 @@ If you install datastructure_tools in a different env or different computer you 
 3. Choose a database to use. We have _opto_db_ as our main DB and _opto_db_test_ as test instance. Please use
 _opto_db_test_ if you are just playing around. And _opto_db_ if you know what you are doing.
 4. Press Save. If you entered correct credentials you will get a message and now datastructure_tools now has a 
-connection to DB. Please restart DB.
+connection to DB. Please restart AdminCommander.
 
 :::{note} Manual changes
 :class: dropdown
