@@ -1,10 +1,11 @@
-# Welcome to Datastructure Tools
-We have compiled a great set of tools to enable us to work more efficiently and reproducible.
+# First steps for DataStructure_tools
+We have compiled a great set of tools to enable us to work more efficiently and reproducible,
+as well as keep out animal documentation up to date.
 
 You would like to start ?
-- Please read [datastructure](../datastructure_documentation/datastructure.md)
-- [Install datastructure tools](installation.md)
-- [Configure tools](AdminCommander.md#db-configuration)
+- Please read about [datastructure](../datastructure_documentation/datastructure.md). This explains how we would like to structure data on out server.
+- [Install datastructure tools](installation.md). This is python packages with a bunch of tools to be used with our database and file server.
+- [Configure those tools](AdminCommander.md#db-configuration)
 - [(Optionally) copy atlas files](AdminCommander.md#copy-brain-atlases)
 - Happy Science !
 
@@ -23,6 +24,6 @@ You would like to start ?
 
 ~~~~
 written by: Artur
-last modified: 2024-01-25
+last modified: 2024-10-23
 ~~~~
 

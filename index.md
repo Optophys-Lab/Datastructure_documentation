@@ -1,25 +1,29 @@
 # Datastructure documentation
-## General introduction
+## Welcome
 Welcome to the documentation of data storage/processing of the [Optophysiology lab](https://www.optophysiology.uni-freiburg.de/) in Freiburg.
 This documentation is meant for internal use.
 
-Want to contribute to this amazing document ? please read the [guide](DocumentationTutorial.md).
+Want to contribute to this amazing document ? please read the [contribution guide](DocumentationTutorial.md).
+
+[First steps for datastructure_tools](gui_documentation/general.md)
+
+## Basics
+- [Introduction to python](DB_documentation/python.md)
+- [Using git and GitHub for version control](gui_documentation/github.md)
+- [Virtual environments and conda](DB_documentation/virtual_env.md)
 
 ## How-to fuer alle Lebenslagen
 - [Create an animal](combinatory_howto/animalcreation.md)
 - [Create a virus](combinatory_howto/viruscreation.md)
-- [Perfusion](combinatory_howto/animalperfusion.md)
 - [Surgery](combinatory_howto/surgery_entry.md)
-- [Behavioral Experiment](combinatory_howto/behavioral_experiment.md)
 - [Water deprivation](combinatory_howto/water_deprivation.md)
+- [Behavioral Experiment](combinatory_howto/behavioral_experiment.md)
+- [Perfusion](combinatory_howto/animalperfusion.md)
 - [Create a general animalsheet entry](combinatory_howto/animalsheetentry.md)
 - [Add new TVA](combinatory_howto/tva.md)
-- [Using git and github for version control](gui_documentation/github.md)
-- [Introduction to python](DB_documentation/python.md)
 
-## GUI documentation for datastructure_tools
-[Introduction to datastructure_tools](gui_documentation/general.md)
 
+## How-to for datastructure_tools GUIs
 How-to of individual tools:
 - [AdminCommander](gui_documentation/AdminCommander.md)
 - [AnimalCommander](gui_documentation/AnimalCommander.md)
@@ -32,7 +36,7 @@ How-to of individual tools:
 - [WeightCommander](gui_documentation/WeightCommander.md)
 
 
-## eLabFTW Documentation
+## How-to eLabFTW
 [Introduction to eLabFTW lab notebook](eLabFTW_documentation/general_elabftw.md)
 
 General how-to:
