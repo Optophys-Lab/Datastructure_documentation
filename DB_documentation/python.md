@@ -46,8 +46,11 @@ Packages installed in one environment are not available in other environments, w
 ## Python 2
 just dont 
 
+## Tutorials on using shell terminal
+<https://swcarpentry.github.io/shell-novice/>
 
-
+## Tutorials on git
+<https://book.the-turing-way.org/reproducible-research/vcs/vcs-git>
 
 
 
