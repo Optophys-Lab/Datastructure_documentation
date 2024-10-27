@@ -2,7 +2,7 @@
 
 python tools to aid in working with our future datastructure
 
-Requirement git, python >=3.8 <3.10
+Requirement git, python >=3.9
 if you have git installed:
 
 ```none
@@ -21,20 +21,19 @@ pip install -e .
 ```
 
 To start GUIs from command-line:
+#make sure current directory is DataStructure_tools
 
 ```none
-#make sure $CWD is DataStructure_tools
-python ./datastructure_tools/AnimalCommander.py
+python ./datastructure_tools/AdminCommander.py
+```
+
+or *NEW*: for this method current directory doesnt matter
+
+```none
+python -m datastructure_tools admin
 ```
 
 To start GUIs from python:
-
-```none
-import datastructure_tools as dt
-dt.startAnimal()
-```
-
-or
 
 ```none
 from datastructure_tools.AnimalCommander import AnimalCommander
@@ -88,7 +87,10 @@ dt.AdminCommander.start_gui()
 ```
 
 and get a module not found error, this might be due to a bug with pyqt. Try opening the commanders by going to the folder and running
+
+```none
 python AdminCommander.py
+```
 
 If you cannot open any of the commanders due to PyQt6 Errors, try updateting PyQt6 via
 
