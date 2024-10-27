@@ -21,20 +21,19 @@ pip install -e .
 ```
 
 To start GUIs from command-line:
+#make sure current directory is DataStructure_tools
 
 ```none
-#make sure $CWD is DataStructure_tools
-python ./datastructure_tools/AnimalCommander.py
+python ./datastructure_tools/AdminCommander.py
+```
+
+or *NEW*: for this method current directory doesnt matter
+
+```none
+python -m datastructure_tools admin
 ```
 
 To start GUIs from python:
-
-```none
-import datastructure_tools as dt
-dt.startAnimal()
-```
-
-or
 
 ```none
 from datastructure_tools.AnimalCommander import AnimalCommander
@@ -82,17 +81,19 @@ with visualisation of said probes
 
 If you run
 
-```none
+´´´python
 import_datastructure_tools as dt
 dt.AdminCommander.start_gui()
-```
+´´´
 
 and get a module not found error, this might be due to a bug with pyqt. Try opening the commanders by going to the folder and running
-python AdminCommander.py
 
+´´´bash
+python AdminCommander.py
+´´´
 If you cannot open any of the commanders due to PyQt6 Errors, try updateting PyQt6 via
 
-```none
+´´´bash
 pip uninstall pyqt6
 pip install pyqt6
-```
+´´´
