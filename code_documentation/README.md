@@ -2,7 +2,7 @@
 
 python tools to aid in working with our future datastructure
 
-Requirement git, python >=3.8 <3.10
+Requirement git, python >=3.9
 if you have git installed:
 
 ```none
@@ -81,19 +81,20 @@ with visualisation of said probes
 
 If you run
 
-´´´python
+```none
 import_datastructure_tools as dt
 dt.AdminCommander.start_gui()
-´´´
+```
 
 and get a module not found error, this might be due to a bug with pyqt. Try opening the commanders by going to the folder and running
 
-´´´bash
+```none
 python AdminCommander.py
-´´´
+```
+
 If you cannot open any of the commanders due to PyQt6 Errors, try updateting PyQt6 via
 
-´´´bash
+```none
 pip uninstall pyqt6
 pip install pyqt6
-´´´
+```
