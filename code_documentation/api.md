@@ -7,6 +7,16 @@
 debug - only print structure dont create
 pipeline has to contain a dict with keys like 0_raw with a list of folders to create
 
+### *class* datastructure_tools.utils.ElectrodePositionCalculator(atlas_path, target_point=None, insertion_point=None)
+
+Class to calculate the position of the electrode in the brain
+To get the coronal slice of the brain use get_coronal_slice
+To claculate points along electrode, target_point and insertion_point are needed
+
+#### get_coronal_slice(ap, ml=0, dv=0)
+
+this function return the coronal slice of the point in mm
+
 ### *class* datastructure_tools.utils.SessionClass(DB, test=False, \*args, \*\*kwargs)
 
 class abstracting all infos about the session
