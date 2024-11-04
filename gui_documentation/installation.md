@@ -9,14 +9,15 @@ Requirement git, python >=3.9, recommended conda
 - How to install conda/miniconda <https://coderefinery.github.io/installation/conda/#conda>
 
 ## Step1 - Clone repository 
-By this we mean create a local copy of the repository on your machine.
+This repository is not public, so make sure you are a member of "Optophys-Lab" on github first. 
+By cloning, we mean create a local copy of the repository on your machine.
 If you have git installed, you can do this by running the following command in your terminal:
 
 ```bash
 git clone https://github.com/Optophys-Lab/DataStructure_tools.git
 cd DataStructure_tools
 ```
-this will download the repository to your current working directory.
+this will download the repository to your current working directory. 
 
 You can also use Github Desktop/GitKraken or similar tools to clone the repository.
 
