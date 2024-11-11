@@ -89,13 +89,10 @@ To add injections push the corresponding [button](#general-surgery-entries).
 6. Add implantation to list
 
 ## Further implantations
-Follow the same structure, see above.
+Follow the same structure as above.
 
 
-#TODO 
-- if atlas is initialized.. try to upload the image(s) to the eLabFTW
-- dump the brain area 
 ~~~~
 written by: Artur 
-last modified: 2024-09-02
+last modified: 2024-11-11
 ~~~~
