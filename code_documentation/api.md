@@ -172,9 +172,13 @@ this is not finished
 
 does Probe specific modifications plots the probeinterface plot
 
-### *class* datastructure_tools.Surgery_classes.Window(DB, \*\*kwargs)
+### *class* datastructure_tools.Surgery_classes.WindowImplant(\*\*kwargs)
 
 this is not finished
+
+#### show_on_atlas(ax=None)
+
+does Lens specific modifications - the thickness of the lens
 
 ## GUIs
 
