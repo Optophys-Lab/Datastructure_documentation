@@ -9,6 +9,10 @@ From the datastructure_tools directory run
 ~~~bash
 python ./AnimalCommander.py
 ~~~
+or from any directory
+~~~bash
+python -m datastructure_tools animal
+~~~
 :::
 :::{error}
 :class: dropdown

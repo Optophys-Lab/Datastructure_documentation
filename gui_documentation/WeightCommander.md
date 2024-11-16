@@ -5,6 +5,10 @@ From the datastructure_tools directory run
 ~~~bash
 python ./WeightCommander.py
 ~~~
+or from any directory
+~~~bash
+python -m datastructure_tools weight
+~~~
 :::
 :::{error}
 :class: dropdown
@@ -97,6 +101,8 @@ This allows you to choose if the given date was a start of water deprivation, en
 ## Store data
 pressing this button will store the inserted data to the database. Careful, removing it is not possible in the current weight commander.
 
+## Signatures
+TODO Implement and write doc
 ~~~~
 written by: Florian
 last modified: 2024-01-22

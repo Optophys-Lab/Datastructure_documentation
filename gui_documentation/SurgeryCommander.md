@@ -16,6 +16,10 @@ From the datastructure_tools directory run
 ~~~bash
 python ./SurgeryCommander.py
 ~~~
+or from any directory
+~~~bash
+python -m datastructure_tools surgery
+~~~
 :::
 
 :::{error}

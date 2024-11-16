@@ -11,6 +11,10 @@ From the datastructure_tools directory run
 ~~~bash
 python ./SessionCommander.py
 ~~~
+or from any directory
+~~~bash
+python -m datastructure_tools session
+~~~
 :::
 
 :::{error}

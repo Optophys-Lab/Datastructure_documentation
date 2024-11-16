@@ -7,7 +7,7 @@ Want to contribute to this amazing document ? please read the [contribution guid
 
 [First steps for datastructure_tools](gui_documentation/general.md)
 
-## Basics
+## Code Basics
 - [Introduction to python](DB_documentation/python.md)
 - [Using git and GitHub for version control](gui_documentation/github.md)
 - [Virtual environments and conda](DB_documentation/virtual_env.md)
@@ -21,6 +21,7 @@ Want to contribute to this amazing document ? please read the [contribution guid
 - [Perfusion](combinatory_howto/animalperfusion.md)
 - [Create a general animalsheet entry](combinatory_howto/animalsheetentry.md)
 - [Add new TVA](combinatory_howto/tva.md)
+- [AnimalSheet Documentation](combinatory_howto/animaldocumentation.md)
 
 
 ## How-to for datastructure_tools GUIs
@@ -42,6 +43,7 @@ How-to of individual tools:
 General how-to:
 - [Register or Login](eLabFTW_documentation/register_login.md)
 - [Generate Apikey](eLabFTW_documentation/generate_apikey.md)
+- [Generate signature passphrase](eLabFTW_documentation/generate_signature.md)
 - [Tools for administration](eLabFTW_documentation/administration_tools.md)
 
 Guides for individual templates:

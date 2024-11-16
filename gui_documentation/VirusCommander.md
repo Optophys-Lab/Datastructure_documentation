@@ -10,6 +10,10 @@ From the datastructure_tools directory run
 ~~~bash
 python ./VirusCommander.py
 ~~~
+or from any directory
+~~~bash
+python -m datastructure_tools virus
+~~~
 :::
 :::{error}
 :class: dropdown

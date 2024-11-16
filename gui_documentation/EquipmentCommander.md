@@ -10,6 +10,10 @@ From the datastructure_tools directory run
 ~~~bash
 python ./EquipmentCommander.py
 ~~~
+or from any directory
+~~~bash
+python -m datastructure_tools equipment
+~~~
 :::
 :::{error}
 :class: dropdown

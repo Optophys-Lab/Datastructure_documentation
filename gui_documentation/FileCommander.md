@@ -9,6 +9,10 @@ From the datastructure_tools directory run
 ~~~bash
 python ./FileCommander.py
 ~~~
+or from any directory
+~~~bash
+python -m datastructure_tools file
+~~~
 :::
 :::{error}
 :class: dropdown
